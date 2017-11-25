@@ -1,0 +1,88 @@
+.blog-blog .toolbar4 { border:1px solid #ededed; padding:12px 20px; }
+.article-page .article-list{
+	float: left;
+}
+.article-page .article-item{
+	float: left;
+	margin-bottom: 40px;
+}
+.article-page .article-name{
+	font-size: 16px;
+	font-weight:600;
+	text-transform: uppercase;
+	margin: 0 0 20px;
+}
+.articledate i{
+	margin-right: 5px;
+}
+.articledate{
+	font-size: 12px;
+	text-transform: uppercase;
+	color: #787878;
+	padding: 10px 0px;
+	border-bottom: 1px solid #E5E5E5;
+	border-top: 1px solid #E5E5E5;
+	margin: 0 0 10px;
+}
+.intro-content{
+	font-size: 13px;
+	margin: 20px 0px;
+	line-height: 30px;
+}
+.readmore-page i{
+	margin-left: 5px;
+	display: inline-block;
+	font-size: 11px;
+}
+.readmore-page{
+	background: #F1574D;
+	color: #fff;
+	font-size: 12px;
+	font-weight:700;
+	text-transform: uppercase;
+	border-radius: 3px;
+	padding: 10px 20px;
+	margin: 5px 0 0;
+	display: inline-block;
+}
+.readmore-page:hover{
+	background: #ED2A1E;
+	color: #fff;
+}
+.article-title{
+	font-size: 16px;
+	font-weight: 600;
+	margin: 0 0 20px;
+	text-transform: uppercase;
+	color: #222;
+}
+.article-description{
+		font-size: 14px;
+margin: 20px 0px;
+line-height: 30px;
+}
+.article-container img{
+	float: left;
+	margin-right: 30px;
+}
+.article-description p{
+	font-size:13px;
+}
+.article-date{
+	display: inline-block;
+	font-size: 12px;
+	text-transform: uppercase;
+	color: #787878;
+	padding: 10px 0px;
+	border-bottom: 1px solid #E5E5E5;
+	border-top: 1px solid #E5E5E5;
+	margin: 0px 0px 10px;
+}
+@media(max-width: 767px){
+	.article-item-inner img {
+		width:100%;
+	}
+	.article-page .article-name { margin:20px 0; }
+	.blog-article .article-container img { width:100%; }
+	.blog-article .article-title { width:100%; display:inline-block; margin:20px 0 0; }
+}
