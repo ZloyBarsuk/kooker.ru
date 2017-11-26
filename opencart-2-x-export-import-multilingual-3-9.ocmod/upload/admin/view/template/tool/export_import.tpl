@@ -1,5 +1,6 @@
 <?php echo $header; ?><?php echo $column_left; ?>
 <div id="content">
+	dsfddsfdfsfsdfds
 	<div class="page-header">
 		<div class="container-fluid">
 			<div class="pull-right">
@@ -36,6 +37,7 @@
 
 				<ul class="nav nav-tabs">
 					<li class="active"><a href="#tab-export" data-toggle="tab"><?php echo $tab_export; ?></a></li>
+					<li class="active"><a href="#tab-export-berghoff" data-toggle="tab"><?php echo $tab_export_berghoff; ?></a></li>
 					<li><a href="#tab-import" data-toggle="tab"><?php echo $tab_import; ?></a></li>
 					<li><a href="#tab-settings" data-toggle="tab"><?php echo $tab_settings; ?></a></li>
 				</ul>
@@ -121,7 +123,85 @@
 							</table>
 						</form>
 					</div>
+					<div class="tab-pane active" id="tab-export-berghoff">
+						<form action="<?php echo $export; ?>" method="post" enctype="multipart/form-data" id="export-berghoff" class="form-horizontal">
+							<table class="form">
+								<tr>
+									<td><?php echo $entry_export; ?></td>
+								</tr>
+								<tr>
+									<td style="vertical-align:top;">
+										<?php echo $entry_export_type; ?><br />
+										<?php if ($export_type=='c') { ?>
+										<input type="radio" name="export_type" value="c" checked="checked" />
+										<?php } else { ?>
+										<input type="radio" name="export_type" value="c" />
+										<?php } ?>
+										<?php echo $text_export_type_category; ?>
+										<br />
+										<?php if ($export_type=='p') { ?>
+										<input type="radio" name="export_type" value="p" checked="checked" />
+										<?php } else { ?>
+										<input type="radio" name="export_type" value="p" />
+										<?php } ?>
+										<?php echo $text_export_type_product; ?>
+										<br />
+										<?php if ($export_type=='o') { ?>
+										<input type="radio" name="export_type" value="o" checked="checked" />
+										<?php } else { ?>
+										<input type="radio" name="export_type" value="o" />
+										<?php } ?>
+										<?php echo $text_export_type_option; ?>
+										<br />
+										<?php if ($export_type=='a') { ?>
+										<input type="radio" name="export_type" value="a" checked="checked" />
+										<?php } else { ?>
+										<input type="radio" name="export_type" value="a" />
+										<?php } ?>
+										<?php echo $text_export_type_attribute; ?>
+										<br />
+										<?php if ($exist_filter) { ?>
+										<?php if ($export_type=='f') { ?>
+										<input type="radio" name="export_type" value="f" checked="checked" />
+										<?php } else { ?>
+										<input type="radio" name="export_type" value="f" />
+										<?php } ?>
+										<?php echo $text_export_type_filter; ?>
+										<br />
+										<?php } ?>
+										<?php if ($export_type=='u') { ?>
+										<input type="radio" name="export_type" value="u" checked="checked" />
+										<?php } else { ?>
+										<input type="radio" name="export_type" value="u" />
+										<?php } ?>
+										<?php echo $text_export_type_customer; ?>
+										<br />
+									</td>
+								</tr>
 
+								<tr id="range_type">
+									<td style="vertical-align:top;"><?php echo $entry_range_type; ?><span class="help"><?php echo $help_range_type; ?></span><br />
+										<input type="radio" name="range_type" value="id" id="range_type_id"><?php echo $button_export_id; ?> &nbsp;&nbsp;
+										<input type="radio" name="range_type" value="page" id="range_type_page"><?php echo $button_export_page; ?>
+										<br /><br />
+										<span class="id"><?php echo $entry_start_id; ?></span>
+										<span class="page"><?php echo $entry_start_index; ?></span>
+										<br />
+										<input type="text" name="min" value="<?php echo $min; ?>" />
+										<br />
+										<span class="id"><?php echo $entry_end_id; ?></span>
+										<span class="page"><?php echo $entry_end_index; ?></span>
+										<br />
+										<input type="text" name="max" value="<?php echo $max; ?>" />
+									</td>
+								</tr>
+
+								<tr>
+									<td class="buttons"><a onclick="downloadData();" class="btn btn-primary"><span><?php echo $button_export; ?></span></a></td>
+								</tr>
+							</table>
+						</form>
+					</div>
 					<div class="tab-pane" id="tab-import">
 						<form action="<?php echo $import; ?>" method="post" enctype="multipart/form-data" id="import" class="form-horizontal">
 							<table class="form">

@@ -174,11 +174,13 @@ $_['error_incremental_only']                            = 'Export/Import: Worksh
 // Tabs
 $_['tab_import']                            = 'Import';
 $_['tab_export']                            = 'Export';
+$_['tab_export_berghoff']                   = 'Export from BergHOFF';
 $_['tab_settings']                          = 'Settings';
 
 // Button labels
 $_['button_import']                         = 'Import';
 $_['button_export']                         = 'Export';
+$_['button_export_berghoff']                = 'Export from BergHOFF';
 $_['button_settings']                       = 'Update Settings';
 $_['button_export_id']                      = 'By id range';
 $_['button_export_page']                    = 'By batches';

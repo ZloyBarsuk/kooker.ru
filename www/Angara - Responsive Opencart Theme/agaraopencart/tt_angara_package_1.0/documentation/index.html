@@ -1,0 +1,1838 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+	<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Angara Responsive Opencart Theme</title>
+    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/jasny-bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/doc.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/added.css">
+    <link rel="stylesheet" href="assets/css/font-awesome.css">
+	<link rel="stylesheet" href="assets/css/font-awesome.min.css">
+    <link rel="icon" href="http://www.plazathemes.com/skin/frontend/default/plaza15/favicon.ico" type="image/x-icon" />
+	<link rel="shortcut icon" href="http://www.plazathemes.com/skin/frontend/default/plaza15/favicon.ico" type="image/x-icon" />
+	<link href='https://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
+	
+	<script src="assets/js/jquery.js"></script>
+	
+	<script src="assets/js/jquery.scrollTo.js"></script>
+	<script src="assets/js/jquery.easing.js"></script>
+	
+	<script>document.createElement('section');var duration='500',easing='swing';</script>
+	<script src="assets/js/backtotop.js" type="text/javascript"></script>
+	<script src="assets/js/script.js"></script>
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+<body style="">
+<header id="header">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-sm-3 col-lg-2">
+                <div id="logo"><span><a href="#"><img src="assets/img/logo.png" alt="" class="img-responsive"></a></span>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-4 col-lg-5">
+                <div id="slogan"><span>Documentation for <span class="color"> Angara -  Multipurpose Responsive Opencart Theme </span></span></div>
+            </div>
+            <div class="col-xs-12 col-sm-5 col-lg-5">
+                <ul class="notifications">
+                    <li><a href="https://twitter.com/towerthemes" target="_blank"> <span class="fa fa-twitter"></span><span class="n-text">Twitter</span>
+                        </a></li>
+                    <li><a href="https://www.facebook.com/towerthemes/" target="_blank"> <span class="fa fa-facebook"></span><span class="n-text">Facebook</span>
+                        </a></li>
+
+                    <li><a href="http://towerthemes.com/" target="_blank"> <span class="fa fa-envelope"></span><span class="n-text">Contact Us</span>
+                        </a></li>
+						
+                    <li>
+						<div class="menu">
+							<a  href="javascript:void(0)" data-toggle="collapse" data-target="#navmenu" ><span class="icon fa fa-bars"></span><span class="n-text">Menu</span></a>
+						</div>					
+					</li>
+                </ul>
+				<div id="navmenu" class="collapse">
+					<ul class="nav navmenu-nav">
+						<li><a href="#welcome"><span class="icon fa fa-home"></span>Welcome</a></li>
+						<li class="dropdown">
+							<a href="javascript:void(0)" data-toggle="collapse" data-target="#inst" ><span class="icon fa fa-cogs"></span>Installation<b class="caret"></b></a>
+							<div id="inst" class="collapse">
+								<ul>
+									<li><a href="#install_quickstart">Install the Demo QuickStart </a></li>
+									<li><a href="#install_theme">Install Theme</a></li>
+									<li><a href="#setting_theme">Set other layout you want to use</a></li>
+									<li><a href="#img_size">Adjust your image sizes</a></li>
+									<li><a href="#upload_logo">Upload your store logo and icon</a></li>
+								</ul>
+							</div>
+						</li>
+						<li class="dropdown">
+							<a  href="javascript:void(0)"  data-toggle="collapse" data-target="#prod" ><span class="icon fa fa-plus-circle"></span>Creating Products<b class="caret"></b></a>
+							<div id="prod" class="collapse">
+								<ul>
+									<li><a href="#add_product">How to add new products</a></li>
+									<li><a href="#special_product">How to set special products</a></li>
+									<li><a href="#discount_product">How to set discount products</a></li>
+									<li><a href="#related_product">How to set related products</a></li>
+								</ul>
+							</div>
+						</li>
+						<li><a href="#create_category"><span class="icon fa fa-plus-square-o"></span>Creating Category</a></li>
+						<li class="dropdown">
+							<a  href="javascript:void(0)"  data-toggle="collapse" data-target="#layo" ><span class="icon fa fa-th-large"></span>Layout in each template<b class="caret"></b></a>
+							<div id="layo" class="collapse">
+								<ul>
+									<li><a href="#layout1">Angara1</a></li>
+									<li><a href="#layout2">Angara2</a></li>
+									<li><a href="#layout3">Angara3</a></li>
+									<li><a href="#layout4">Angara4</a></li>
+									<li><a href="#grid_detail">Category & Detail</a></li>
+								</ul>
+							</div>
+						</li>
+						<li><a href="#layout_position"><span class="icon fa fa-cog"></span>Set layout position of module in OpenCart</a></li>
+						<li class="dropdown">
+							<a  href="javascript:void(0)" data-toggle="collapse" data-target="#posi" ><span class="icon fa fa-th"></span>Position in each template<b class="caret"></b></a>
+							<div id="posi" class="collapse">
+								<ul>
+									<li><a href="#position1">Angara1</a></li>
+									<li><a href="#position2">Angara2</a></li>
+									<li><a href="#position3">Angara3</a></li>
+									<li><a href="#position4">Angara4</a></li>
+									<li><a href="#position9">Category & Detail</a></li>
+								</ul>
+							</div>
+						</li>
+						<li><a href="#modules_setting"><span class="icon fa fa-chain-broken"></span>Modules Settings</a></li>
+						<li><a href="#create_module"><span class="icon fa fa-chain-broken"></span>Creating Module</a></li>
+						<li class="dropdown">
+							<a  href="javascript:void(0)" data-toggle="collapse" data-target="#theme" ><span class="icon fa fa-clipboard"></span>Theme Components<b class="caret"></b></a>
+							<div id="theme" class="collapse">
+								<ul>
+									<li><a href="#header_footer"> How to edit Header and Footer</a></li>
+									<li><a href="#customize_product"> How to customize thumbnail image and related slider in Product page</a></li>
+									<li><a href="#config_content_builder">Config Layout Content Builder</a></li>
+									<li><a href="#config_search">Config OC Search Category</a></li>
+									<li><a href="#config_menu">Config OC Horizontal Mega Menu</a></li>
+									<li><a href="#config_vermenu">Config OC Vertical Megamenu</a></li>
+									<li><a href="#config_slideshow">Config OC Slide show</a></li>
+									<li><a href="#config_cmsblock">Config OC Cms block</a></li>
+									<li><a href="#config_tabcategory">Config OC Category Tabs Slider</a></li>
+									<li><a href="#config_featured_category">Config OC Featured Category</a></li>
+									<li><a href="#config_featured_categorytab">Config OC Featured Categories Tab</a></li>
+									<li><a href="#config_featured">Config OC Featured Products Slider </a></li>
+									<li><a href="#config_new">Config OC New Products Slider </a></li>
+									<li><a href="#config_random">Config OC Random Products Slider </a></li>
+									<li><a href="#config_onsale">Config OC Special Products Slider </a></li>
+									<li><a href="#config_bestseller">Config OC Bestseller Products Slider </a></li>
+									<li><a href="#config_mostviewed">Config OC Most Viewed Products Slider </a></li>
+									<li><a href="#config_countdown">Config OC Price Countdown </a></li>
+									<li><a href="#config_banner">Config Banner module</a></li>
+									<li><a href="#config_blog">Config OC Blog</a></li>
+									<li><a href="#config_testimonial">Config OC Testimonials</a></li>
+									<li><a href="#config_newsletter">Config Oc Newsletter</a></li>
+									<li><a href="#config_layered">Config OC Layered Navigation Ajax</a></li>
+									<li><a href="#config_quickview">Config OC Product Quick View</a></li>
+									<li><a href="#rotator_image">Config OC Product Rotator Image </a></li>
+								</ul>
+							</div>
+						</li>
+						<li><a href="#translate"><span class="icon fa fa-globe"></span>Translation</a></li>
+						<li><a href="#support"><span class="icon fa fa-ticket"></span>Theme Support</a></li>
+					</ul>
+				</div>
+            </div>
+        </div>
+    </div>
+</header>
+<div class="canvas" style="">
+    <div id="content" class="container">
+        
+        <div id="page-content">
+
+            <!--START-->
+            <div class="chapter" id="welcome">
+                <h2>Angara is a <a href="http://www.plazathemes.com/">  Multipurpose Opencart Responsive Theme </a> with advanced admin modules, extremely customizable and fully responsive. It is suitable for every type of store. It is a standalone design package so you can easily create your own sub-themes. </h2>
+                <p>Thank you for purchasing my theme!<br>If you have any questions that are beyond the scope of this
+                    documentation, please feel free to submit ticket to <a href="http://plazathemes.com/tickets/" target="_blank">http://plazathemes.com/tickets/</a>.<br><br>
+                    Thanks so much!</p>
+                <div class="divider"></div>
+                <div class="row">
+                    <div class="col-sm-8">
+                        <h2>Compatible with Opencart:</h2>
+                        <p>Angara Opencart Theme is fully compatible with Opencart 2.3.x.	</p>
+                    </div>
+                </div>
+                <div class="divider"></div>
+			
+                <h2>Opencart HELP</h2>
+
+                <p>Angara is theme for Opencart ecommerce platform. Before you start working with theme you should be
+                    familiar with Opencart. Please read following links:</p>
+                <ul class="marked-list">
+                    <li><a rel="nofollow" href="https://en.wikipedia.org/wiki/OpenCart" target="_blank">Opencart Wiki</a></li>
+                    <li><a rel="nofollow" href="https://forum.opencart.com/" target="_blank">Opencart Forums</a></li>
+                    <li>
+                        <a rel="nofollow" href="http://docs.opencart.com/" target="_blank">Online Opencart guide</a></li>
+                    <li><a rel="nofollow" href="http://docs.opencart.com/requirements/" target="_blank">System
+                            Requirements</a></li>
+                    <li><a rel="nofollow" href="http://stackoverflow.com/questions/tagged/opencart" target="_blank">stackoverflow.com </a></li>
+
+
+                </ul>
+            </div><!--START-->
+
+            <!--QUICKSTART-->	
+            <div class="chapter" id="install_quickstart">
+                <div class="divider"></div>
+                <h2>Install the demo Quickstart</h2>
+				<p> There are two ways to install an <strong>Opencart Theme</strong>: </p>
+				<ul>
+					<li> <p> <strong>Install quickstart </strong>: By using this package, you will set the theme exactly as our Demo with sample data. </p></li> 
+					<li> <p> <strong>Install only template </strong>: If you exist a opencart website you can install only template.</p></li> 
+				</ul>
+                <p class="alert alert-danger">
+                    <b>Warning!</b>  Before uploading theme files on a production environment, make sure you have tested it before on a development environment. Make sure to create a backup of your original files and database before uploading theme files.
+                </p>
+				<p> <img src="assets/img/ex_demo.jpg"  alt="demo" /> </p>
+				<p style="text-align:center;"><i>Your website front-end with clear image sizes after the QuickStart installation</i></p>
+				<p>To install QuickStart package, please follow these guides below:</p>
+                <ol>
+					<li><p> Create new database:</p>
+						<ul> 
+							<li><p> Open your Browser and type : <strong>localhost/phpmyadmin</strong> or <strong>yourdomain/phpmyadmin</strong></p>
+							</li>
+							<li> 
+								<p> Then create database</p>
+								<p> <img src="assets/img/db1.jpg"  alt="create database" /> </p>
+							</li>
+						</ul>
+					</li>
+				<li> 
+					<p> Extract and Upload the whole quickstart package (admin, catalog, image  … in  <strong> tt_angara_quickstart_2.3.0.2</strong> folder ) to your server.</p></li>
+				<li> 
+					<p> Open browser and navigate to your site (where the quickstart uploaded) to load default Opencart installer with the database you just created.</p>
+					<p> As an example, name of opencart is <strong>tt_angara_test.</strong></p>
+					<p> <img src="assets/img/s1.jpg"  alt="install step1" /> </p>
+					<p>Click <strong>Continue</strong> button. </p>
+				</li> 
+			
+				<li> 
+					<p> We got: </p>
+					<p> <img src="assets/img/s2.jpg"  alt="install step2" /> </p>
+					<p>Click <strong>Continue</strong>. </p>
+				</li>
+				
+				<li> 
+					<p> We got: </p>
+					<p> <img src="assets/img/s3.jpg"  alt="install step3" /> </p>
+					<p>Click <strong>Continue</strong>. </p>
+				</li>
+			
+				<li> 
+					<p> We got: </p>
+					<p> <img src="assets/img/s4.jpg"  alt="install step4" /> </p>
+					<p> You need to delete <strong> install </strong> folder.</p>
+					<p> <img src="assets/img/del_install.png"  alt="delete install" /> </p>
+				</li>
+				<li> 
+					<p> Click <strong> Go to your online shop  </strong> to go to frontend </p>
+					<p> Click <strong> Login to your administration  </strong> to go to backend </p>
+				</li>
+				<li>
+					<p> Login your opencart admin and set domain for each store.</p>
+					<p> Go to <strong> System -> Settings  </strong></p>
+					<p> At tab <strong> Store Name </strong>, choose your store that you want to use, click <strong> Edit </strong> button.</p>
+					<p> Choose tab <strong>General</strong></p>
+					<p> <img src="assets/img/set_store1.jpg"  alt="set store" /> </p>
+					<p> Choose tab <strong>Store</strong></p>
+					<p> <img src="assets/img/set_store2.jpg"  alt="set store2" /> </p>
+					<p><strong><u> Note</u></strong>: You need remove the URL if you want to use that domain for different store.</p>
+				</li>
+				<li><p> Click <strong>Save</strong> button when finish.</p></li>
+				</ol>
+
+            </div><!--QUICKSTART-->
+		   <!--TEMPLATE-->
+            <div class="chapter" id="install_theme">
+                <div class="divider"></div>
+                <h2>Install Template</h2>
+				<br/>
+				<p> <strong>To install our theme, you need to do 2 steps :</strong></p>
+				<button type="button" class="btn btn-info" data-toggle="collapse" data-target="#step1">STEP 1. Install default Opencart <span class="icon fa fa-hand-o-down"></span></button>
+				<div id="step1" class="collapse">
+				<p>We recommend installing Angara on a fresh copy of OpenCart or on existing setups with no custom modifications. See more at <a rel="nofollow" href="http://docs.opencart.com/installation/"> http://docs.opencart.com/installation/</a><i> . The installation is very easy, please follow these instructions carefully.</i></p>
+				<ol>
+					<li> <p> Download OpenCart archive from <a rel="nofollow" href="http://www.opencart.com/?route=download/download"> Opencart Website </a> and unzip it. </p></li>
+					<li><p>Upload it to your server </p></li>
+					<li><p> Create new database:</p>
+						<ul> 
+							<li><p> Open your Browser and type : <strong>localhost/phpmyadmin</strong> or <strong>yourdomain/phpmyadmin</strong></p></li>
+							<li> 
+								<p> Then create database</p>
+								<p> <img src="assets/img/db1.jpg"  alt="import database1" /> </p>
+							</li>
+						</ul>
+					</li>
+					<li> 
+						<p> Open browser and navigate to your site (where the achieve uploaded) to load default Opencart installer with the database you just created.</p>
+						<p>As an example, name of opencart is <strong>tt_angara_test.</strong></p>
+						<p> <img src="assets/img/s1.jpg" alt="install step1" /> </p>
+						<p>Click <strong>Continue</strong> button. </p>
+					</li> 
+					<li> 
+						<p> We got: </p>
+						<p> <img src="assets/img/install2.jpg"  alt="install step2" /> </p>
+						<em> You need to rename 2 files : <strong>config-dist.php </strong> to <strong> config.php </strong></em>
+						<p> <img src="assets/img/config1.jpg"  alt="config1" /> ------>  <img src="assets/img/config11.jpg"  alt="config11" /></p>
+						<p> <img src="assets/img/config2.jpg"  alt="config2" />  ------>  <img src="assets/img/config22.jpg"  alt="config22" /></p>
+						<p> URL : "config-dist.php" and "admin/config-dist.php" </p>
+						<p> If you don't rename 2 these files, we got error :</p>
+						<p> <img src="assets/img/install21.jpg"  alt="error" /> </p>
+						<p>Click <strong>Continue</strong> </p>
+					</li>
+					
+					<li> 
+						<p> We got: </p>
+						<p> <img src="assets/img/s3.jpg"  alt="install step3" /> </p>
+						<p>Click <strong>Continue</strong>. </p>
+						<p><span style="color:red">***</span> Note: By default, during installation, Opencart creates the database with all of the tables prefixed with “<code>oc_</code>”. If your database has ready for theme, you need change default table prefix before importing database. Open your <i>oc_Angara.sql</i> file which is located in our package. Replace the table prefix from <code>oc_</code> to your prefix. So the line would look like this:</p>
+						<p> <img src="assets/img/prefix.jpg"  alt="error" /> </p>
+					</li>
+					
+					<li> 
+						<p> We got: </p>
+						<p> <img src="assets/img/s4.jpg"  alt="install step4" /> </p>
+						<p> You need to delete <strong> install </strong> folder.</p>
+						<p> <img src="assets/img/del_install.png"  alt="delete install" /> </p>
+					</li>
+					<li> 
+						<p> Click <strong> Go to your online shop  </strong> to go to frontend </p>
+						<p> Click <strong> Login to your administration  </strong> to go to backend </p>
+					</li>
+				</ol>
+				</div>
+				<button type="button" class="btn btn-info" data-toggle="collapse" data-target="#step2">STEP 2. Install template <span class="icon fa fa-hand-o-down"></span></button>
+				<div id="step2" class="collapse">
+				<p> When finish install default opencart, we install template:</p>
+				<ol>
+					<li>Extract the <strong>tt_angara_template_1.0.zip</strong> from the archive you downloaded from Themeforest.</li>
+					<li>Locate the <i>Angara</i> folder . <em>We recommend 2.3.x, as it has significant improvements.</em> </li>
+					<li>Drag the all folders (admin, catalog, image, database,...) over to your OpenCart installation and merge them with the existing ones.</li>
+					<li>Login your opencart admin</li>
+					<li> Go to<strong> Extensions -> Extensions -> Choose the extension type -> Modules </strong> -> Choose <strong> OC Template Installation </strong> button </li>
+					<li> Go to<strong> System -> Tools -> Backup/Restore </strong> 
+					<p><img src="assets/img/import.jpg" alt="import database quickstart" /></p>
+					<p>1 - Click "Browse" to choose database in folder <strong> database </strong> in the template </p>
+					<p>2 - Click "Import" button to import database</p>
+					</li>
+					<li>
+						<p> Then choose <strong> Extensions -> Modifications</strong> -> Refresh modifications</p>
+						<p><img src="assets/img/modifications2.jpg" alt="modification2" /></p></li>
+					<li>Refesh your homepage. Finish installer. Default is Angara1.</li>
+				</ol>
+				</div>
+			</div> <!--TEMPLATE-->
+			
+			
+			<!--SETTING THEME-->
+            <div class="chapter" id="setting_theme">
+                <div class="divider"></div>
+                <h2>Set other layout you want to use</h2>
+				<p><i>If you used one layout, then want to use other layout, please do these steps:</i></p>
+				<ul>
+					<li><strong>Angara1 </strong> :
+					<p> - Choose <strong> Extensions -> Extensions -> Choose the extension type ->  Themes  </strong> -> choose <strong>Angara</strong> -> at <strong>Theme Directory </strong> : select <strong> tt_angara1</strong> -> <strong> Save </strong></p>
+					<p> - Deselect <strong> Default </strong> at current layout : -> Go to<strong> Design -> Layouts -> Angara 02: Home/Angara 03: Home/Angara 04: Home(current layouts - has "Default" Store, layouts start with "Angara 02/Angara 03/Angara 04"  )</strong> -> Deselect <strong> Default </strong> at <strong> Store </strong> -> Save </p> 
+					<p> - Select <strong> Default </strong> for Angara1 -> Choose <strong> Angara 01: Home </strong>(layouts start with '<strong>Angara 01</strong>') -> Select <strong> Default </strong> at <strong> Store </strong> -> Save -> Refresh your homepage.</p>
+					<p> - Go to <strong> System -> Settings </strong>-> Choose <strong> Angara (Default)</strong> ->  At <strong> Default Layout </strong>, select <strong> Angara 01: Default </strong> -> Save -> Refresh your homepage. Angara1 is installed.</p>
+					</li>
+					<li><strong>Angara2 </strong> :
+					<p> - Choose <strong> Extensions -> Extensions -> Choose the extension type ->  Themes  </strong> -> choose <strong>Angara</strong> -> at <strong>Theme Directory </strong> : select <strong> tt_angara2</strong> -> <strong> Save </strong></p>
+					<p> - Deselect <strong> Default </strong> at current layout : -> Go to<strong> Design -> Layouts -> Angara 01: Home/Angara 03: Home/Angara 04: Home(current layouts - has "Default" Store, layouts start with "Angara 01/Angara 03/Angara 04"  )</strong> -> Deselect <strong> Default </strong> at <strong> Store </strong> -> Save </p> 
+					<p> - Select <strong> Default </strong> for Angara2 -> Choose <strong> Angara 02: Home </strong>(layouts start with '<strong>Angara 02</strong>') -> Select <strong> Default </strong> at <strong> Store </strong> -> Save -> Refresh your homepage.</p>
+					<p> - Go to <strong> System -> Settings </strong>-> Choose <strong> Angara (Default)</strong> ->  At <strong> Default Layout </strong>, select <strong> Angara 02: Default </strong> -> Save -> Refresh your homepage. Angara2 is installed.</p>
+					</li>
+					<li><strong>Angara3 </strong> :
+					<p> - Choose <strong> Extensions -> Extensions -> Choose the extension type ->  Themes  </strong> -> choose <strong>Angara</strong> -> at <strong>Theme Directory </strong> : select <strong> tt_angara3</strong> -> <strong> Save </strong></p>
+					<p> - Deselect <strong> Default </strong> at current layout : -> Go to<strong> Design -> Layouts -> Angara 01: Home/Angara 02: Home/Angara 04: Home(current layouts - has "Default" Store, layouts start with "Angara 01/Angara 02/Angara 04"  )</strong> -> Deselect <strong> Default </strong> at <strong> Store </strong> -> Save </p> 
+					<p> - Select <strong> Default </strong> for Angara3 -> Choose <strong> Angara 03: Home </strong>(layouts start with '<strong>Angara 03</strong>') -> Select <strong> Default </strong> at <strong> Store </strong> -> Save -> Refresh your homepage.</p>
+					<p> - Go to <strong> System -> Settings </strong>-> Choose <strong> Angara (Default)</strong> ->  At <strong> Default Layout </strong>, select <strong> Angara 03: Default </strong> -> Save -> Refresh your homepage. Angara3 is installed.</p>
+					</li>
+					<li><strong>Angara4 </strong> :
+					<p> - Choose <strong> Extensions -> Extensions -> Choose the extension type ->  Themes  </strong> -> choose <strong>Angara</strong> -> at <strong>Theme Directory </strong> : select <strong> tt_angara4</strong> -> <strong> Save </strong></p>
+					<p> - Deselect <strong> Default </strong> at current layout : -> Go to<strong> Design -> Layouts -> Angara 01: Home/Angara 02: Home/Angara 03: Home(current layouts - has "Default" Store, layouts start with "Angara 01/Angara 02/Angara 03"  )</strong> -> Deselect <strong> Default </strong> at <strong> Store </strong> -> Save </p> 
+					<p> - Select <strong> Default </strong> for Angara4 -> Choose <strong> Angara 01: Home </strong>(layouts start with '<strong>Angara 04</strong>') -> Select <strong> Default </strong> at <strong> Store </strong> -> Save -> Refresh your homepage.</p>
+					<p> - Go to <strong> System -> Settings </strong>-> Choose <strong> Angara (Default)</strong> ->  At <strong> Default Layout </strong>, select <strong> Angara 04: Default </strong> -> Save -> Refresh your homepage. Angara4 is installed.</p>
+					</li>
+				</ul><br/>
+				<h4>Example : Install Angara2: </h4>
+				<p> You can see video at here : </p>
+					<p> <embed allowscriptaccess="never" src="http://www.youtube.com/v/loxW9Ry62rY" type="application/x-shockwave-flash" height="400" width="760"> </p>
+				<ol>
+					<li>
+						<p> Go to <strong> Extensions -> Extensions -> Choose the extension type -> Themes </strong> -> choose <strong>Angara1</strong>-> at <strong>Theme Directory </strong> : select <strong> tt_angara2 </strong> -> <strong> Save </strong></p>
+						<p> <img src="assets/img/set_theme.jpg"  alt="set theme" /> </p>
+					</li>
+					<li><p>Set <strong>Default</strong> for layouts you want to use</p> 
+						<p>- Then go to <strong> Design -> Layouts -> Angara 01: Home(current layout, layouts start with "Angara 01")</strong> -> At <strong> Store </strong> : Deselect <strong>Default </strong> at <strong> Store </strong> -> <strong> Save </strong></p>
+						<img src="assets/img/change1.jpg"  alt="Change1" />
+						<p>- Next choose <strong>Angara 02</strong>: Home (layouts start with "Angara 02") -> At <strong> Store </strong> : choose <strong>Default </strong> -> <strong> Save </strong></p>
+						<img src="assets/img/change2.jpg"  alt="Change2" />
+						</li>
+					<li>
+						<p> Go to <strong> System -> Settings </strong> -> choose <strong>Angara (Default)</strong>-> Select <strong> General </strong> tab ->  At <strong>Default Layout </strong> : select <strong> Angara 02: Default </strong> -> <strong> Save </strong></p>
+					</li>
+					<li> Refresh home page. Finish installer.</li>
+					<li> <p>If when you use templates, your web may be in maintenance mode. Please Login admin -> <strong> System -> Settings -> choose Store "Default" -> Server</strong> -> At <strong> Maintenance </strong> mode, choose <strong> No </strong> -> <strong> Save </strong> </p>
+					<img src="assets/img/maitenance.jpg"  alt="Maitenance" />
+					</li>
+				</ol>
+			</div><!--SETTING THEME-->
+
+			<!--IMG SIZE-->
+            <div class="chapter" id="img_size">
+                <div class="divider"></div>
+                <h2>Adjust your image sizes</h2>
+				<p><strong>Before</strong> you start using your store with the <strong>Angara</strong> theme, image settings must be edited with the following values:</p>
+				<ol>
+					<li> Login to your Opencart Admin Area</li>
+					<li> Go to <strong>Extensions</strong> > <strong>Choose the extension type</strong> > <strong>Themes</strong> > <strong>Angara</strong> > <strong>Edit</strong> </li>
+					<li> At <strong>Image</strong> part, image settings can be edited with the values.<br/>
+					<p>You can set number of items per Testimonial page, number of products per Category page.</p>
+					</li>
+				</ol>
+			</div><!--IMG SIZE-->
+			
+			<!--UPLOAD LOGO-->
+            <div class="chapter" id="upload_logo">
+                <div class="divider"></div>
+                <h2>Upload your store logo and icon</h2>
+				<p>To upload your store logo and icon, please do these steps : </p>
+				<ol>
+					<li>Open your OpenCart Administration page and go to <strong> System -> Settings</strong> -> choose <strong> Default </strong> store -> click tab <strong> Image </strong> : </li>
+					<li>Upload your store logo and icon:<br />
+					<p><img src="assets/img/upload_logo.jpg" alt="upload logo" /></p>
+					<p> - At <strong> Store Logo </strong> : Upload your logo</p>
+					<p> - At <strong> Icon </strong> : Upload your store icon</p>
+					</li>
+					<li> Click <strong> Save </strong> to save your changes. </li>
+				</ol>
+			</div><!--UPLOAD LOGO-->
+			
+			<!--ADD NEW PRODUCT-->
+            <div class="chapter" id="add_product">
+                <div class="divider"></div>
+                <h2>How to add new products</h2>
+				<ol>
+					<li> <p> Login your opencart admin</p></li> 
+					<li> 
+						<p>Go to <strong> Catalog -> Products -> Add New </strong> </p>
+						<p> <img src="assets/img/add_p1.jpg" alt="add new product step1" /> </p>
+					</li>
+					<li> 
+						<p>Now you will see seven tabs (General, Data, Links, Attribute, Option, Discount, Special, Image, Reward Points, and Design). Be sure to fill in the <strong> Product Name </strong> , <strong> Meta Tags Title </strong> -  required fields - on the first tab.</p>
+						<p> <img src="assets/img/add_p2.jpg" alt="add new product step2" /> </p>
+					</li>		
+					<li><p>Click <strong> Save </strong> button when finish. </p></li>
+				</ol>
+				<p> You can add as many products as you would like. </p> 
+			</div><!--ADD NEW PRODUCT-->
+			
+			<!--SPECIAL PRODUCTS-->
+            <div class="chapter" id="special_product">
+                <div class="divider"></div>
+                <h2>How to set special products</h2>
+				<p><i>***A special price is a product's sale price. For example a product may have cost $400, but using the specials option in OpenCart you can set the price to $350. Customers can see the "old price - new price" difference.</i></p>
+				<ol>
+				<li> <p> Login your opencart admin</p></li> 
+				<li> <p>Go to <strong> Catalog -> Products </strong> </p></li> 
+				<li> 
+					<p> Search for the product you would like to set on specials. Click <strong> Edit </strong>link to edit it.</p>
+					<p> <img src="assets/img/set_special1.jpg" alt="set special step1" /> </p>
+				</li>
+				<li> 
+					<p>  Choose Special tab and click <strong> Add Special</strong> button </p>
+					<p> <img src="assets/img/set_special2.jpg" alt="set special step2" /> </p>
+				</li>	
+				<li> 
+					<p>  Special prices change the value of the product price to the new special price. Specials for a customer group will display the special price only if the customer is logged in as that group. </p>
+					<p> <img src="assets/img/set_special3.jpg" alt="" /> </p>
+					<p> <strong> Customer Group</strong> - Optionally select a customer group you want this special to apply to. </p>
+					<p> <strong>Priority </strong> -  If you will offer multiple specials and/or discounts, enter 1 for this to be applied first, 2 for this to be applied second. </p>
+					<p> <strong> Price </strong> - The price you want the customer to see. </p>
+					<p> <strong> Date Start </strong> -  When you want this special price to appear. </p>
+					<p> <strong> Date End </strong> - When you want this special price to disappear.</p>
+				</li>		
+				<li><p>Click <strong> Save </strong> button when finish. </p></li>
+			</ol>
+			</div><!--SPECIAL PRODUCTS-->
+			<!--DISCOUNT PRODUCTS-->
+            <div class="chapter" id="discount_product">
+                <div class="divider"></div>
+                <h2>How to set discount products</h2>
+				<p><i>***Discount means that the price of a given product decreases as a customer buys more of it. In other words, a single piece may cost $30, but if you buy five pieces then each would only cost $28. The more a customer buys, the more they save.</i></p>
+				<ol>
+				<li><p> Login your opencart admin</p></li> 
+				<li><p>Go to <strong> Catalog -> Products </strong> </p></li>
+				<li> 
+					<p> Locate the product you want to create the discount for . Click <strong> Edit </strong>link to edit it.</p>
+					<p> <img src="assets/img/set_special1.jpg" alt="set special step1" /> </p>
+				</li>
+				<li> 
+					<p>  Choose <strong> Discount </strong> tab and click <strong> Add Discount</strong> button </p>
+					<p> <img src="assets/img/set_discount2.jpg" alt="set discount step2" /> </p>
+				</li>	
+				<li> 
+					<p> We got : </p>
+					<p> <img src="assets/img/set_discount3.jpg" alt="set discount step3" /> </p>
+					<p> <strong> Customer Group</strong> - Optionally select a customer group you want this special to apply to. </p>
+					<p> <strong>Quantity </strong> -  Set how many pieces a customer needs to purchase in order to get the discounted price.</p>
+					<p> <strong>Priority </strong> -  If you will offer multiple specials and/or discounts, enter 1 for this to be applied first, 2 for this to be applied second. </p>
+					<p> <strong> Price </strong> - The price you want the customer to see. </p>
+					<p> <strong> Date Start </strong> -  When you want this discount price to appear. </p>
+					<p> <strong> Date End </strong> - When you want this discount price to disappear.</p>
+				</li>		
+				<li><p>Click <strong> Save </strong> button when finish. </p></li>
+			</ol>
+			</div><!--DISCOUNT PRODUCTS-->
+			
+			<!--RELATED PRODUCTS-->
+            <div class="chapter" id="related_product">
+                <div class="divider"></div>
+                <h2>How to set related products</h2>
+				<ol>
+				<li><p> Login your opencart admin</p></li> 
+				<li><p>Go to <strong> Catalog -> Products </strong> </p></li> 
+				<li> 
+					<p> Locate the product you want to add related products to . Click <strong> Edit </strong>link to edit it.</p>
+					<p> <img src="assets/img/set_special1.jpg" alt="set special step1 " /> </p>
+				</li>
+				<li> 
+					<p>  Choose <strong> Links </strong> tab and scroll down until you see the  <strong> Related Products </strong> field </p>
+					<p> <img src="assets/img/set_related2.jpg" alt="set related step2" /> </p>
+				</li>	
+				<li> 
+					<p> Start typing a product name in that field and OpenCart will drop down a list of products that start with whatever letters you have typed in.   </p>
+					<p> <img src="assets/img/set_related3.jpg" alt="set related step3" /> </p>
+					<p><strong> Important! If the product you are typing is not in your OpenCart products, the drop box will not appear. Make sure you are typing a product that you have in your OpenCart.</strong></p>
+				</li>		
+				<li> <p>Click <strong> Save </strong> button when finish. </p></li>
+			</ol>
+			</div><!--RELATED PRODUCTS-->
+			
+			<!--CREAT CATEGORY-->
+            <div class="chapter" id="create_category">
+                <div class="divider"></div>
+                <h2>Creating Category</h2>
+				<p> * See more at <a rel="nofollow" href="http://docs.opencart.com/catalog/category/"> http://docs.opencart.com/catalog/category/</a> to understand about Category in Opencart.</p>
+				<p> * See more at <a rel="nofollow" href="http://docs.opencart.com/catalog/attribute/"> Attributes</a> to understand about attributes in Opencart.</p>
+				<p> * See more at <a  href="#filters"> Filter</a> to learn how to add filters.</p>
+				
+			</div><!--CREAT CATEGORY-->
+			
+			<!--LAYOUT1-->
+            <div class="chapter" id="layout1">
+                <div class="divider"></div>
+                <h2>Angara1</h2>
+				<h4 style="text-align:center"> Home page </h4>
+				<p> <img src="assets/img/home1.jpg" alt="home1" /> </p>
+				<br/>
+				<h2>Category & Detail</h2>
+				<h3 style="text-align:center"> Category </h3>
+				<p> <img src="assets/img/grid1.jpg" alt="grid" /> </p>
+				<br/>
+				<h3 style="text-align:center"> Product </h3>
+				<p> <img src="assets/img/detail1.jpg" alt="detail" /> </p>
+				<br/>
+			</div><!--LAYOUT1-->
+			
+			<!--LAYOUT2-->
+            <div class="chapter" id="layout2">
+                <div class="divider"></div>
+                <h2>Angara2</h2>
+				<h4 style="text-align:center"> Home page </h4>
+				<p> <img src="assets/img/home2.jpg" alt="home2" /> </p>
+				<br/>
+				<h2>Category & Detail</h2>
+				<h3 style="text-align:center"> Category </h3>
+				<p> <img src="assets/img/grid2.jpg" alt="grid" /> </p>
+				<br/>
+				<h3 style="text-align:center"> Product </h3>
+				<p> <img src="assets/img/detail2.jpg" alt="detail" /> </p>
+				<br/>
+			</div><!--LAYOUT2-->
+			
+			<!--LAYOUT3-->
+            <div class="chapter" id="layout3">
+                <div class="divider"></div>
+                <h2>Angara3</h2>
+				<h4 style="text-align:center"> Home page </h4>
+				<p> <img src="assets/img/home3.jpg" alt="home3" /> </p>
+				<br/>
+				<h2>Category & Detail</h2>
+				<h3 style="text-align:center"> Category </h3>
+				<p> <img src="assets/img/grid3.jpg" alt="grid" /> </p>
+				<br/>
+				<h3 style="text-align:center"> Product </h3>
+				<p> <img src="assets/img/detail3.jpg" alt="detail" /> </p>
+				<br/>
+			</div><!--LAYOUT3-->
+			
+			<!--LAYOUT4-->
+            <div class="chapter" id="layout4">
+                <div class="divider"></div>
+                <h2>Angara4</h2>
+				<h4 style="text-align:center"> Home page </h4>
+				<p> <img src="assets/img/home4.jpg" alt="home4" /> </p>
+				<br/>
+				<h2>Category & Detail</h2>
+				<h3 style="text-align:center"> Category </h3>
+				<p> <img src="assets/img/grid4.jpg" alt="grid" /> </p>
+				<br/>
+				<h3 style="text-align:center"> Product </h3>
+				<p> <img src="assets/img/detail4.jpg" alt="detail" /> </p>
+				<br/>
+			</div><!--LAYOUT4-->
+             
+			<!--LAYOUT POSITION-->
+            <div class="chapter" id="layout_position">
+                <div class="divider"></div>
+                <h2>Set layout position of module in OpenCart 2.3</h2>
+				<p><i> After install various extensions that best suit your needs, you need to set layout position of module. Please see these steps below:</i></p>
+				<ol>
+					<li>Go to <strong>Design</strong> > <strong>Layouts</strong>
+					<p> <img src="assets/img/position1.jpg" alt="position" /> </p>	</li>
+					<li>Click on <strong>Edit</strong> button to set the modules position for Home page.
+					<p> <img src="assets/img/position2.jpg" alt="position" /> </p>	</li>
+					<li>
+					<p>- Select the Position for layout of module.</p>
+					<p>- Select module from Modules option.</p>
+					<p>- Click <strong>Add Module</strong> to add module for each position</p>
+					<p>Example: with <strong>OC Horizontal Mega Menu</strong> module</p>
+					<p> <img src="assets/img/position31.jpg" alt="position3" /> </p>	</li>
+					<li>Click on <strong>Save</strong> button in the top right corner when you have completed settings of layout</li>
+				</ol>
+			</div><!--LAYOUT POSITION-->
+			
+			<!--LAYOUT HOME1-->
+            <div class="chapter" id="position1">
+                <div class="divider"></div>
+                <h2>Angara1</h2>
+				<p> -> To set the layout like Angara1:  Login admin -> <strong> Design -> Layouts -> Angara 01: Home</strong> and set the layout like :  </p>
+				<p> <img src="assets/img/layout_home1.jpg" alt="layout_home1" /> </p>
+				<h3 style="text-align:center"> Category </h3>
+				<p> -> To set the layout like Category page :  Login admin -> <strong> Design -> Layouts -> Angara 01: Category</strong> and set the layout like:  </p>
+				<p> <img src="assets/img/layout_grid1.jpg" alt="layout grid" /> </p>
+				<br/>
+				<h3 style="text-align:center"> Detail </h3>
+				<p> -> To set the layout like Product page :  Login admin -> <strong> Design -> Layouts -> Angara 01: Product</strong> and set the layout like:  </p>
+				<p> <img src="assets/img/layout_detail1.jpg" alt="layout detail" /> </p>
+			</div><!--LAYOUT HOME1-->
+			
+			<!--LAYOUT HOME2-->
+            <div class="chapter" id="position2">
+                <div class="divider"></div>
+                <h2>Angara2</h2>
+				<p> -> To set the layout like Angara2:  Login admin -> <strong> Design -> Layouts -> Angara 02: Home</strong> and set the layout like :  </p>
+				<p> <img src="assets/img/layout_home2.jpg" alt="layout_home2" /> </p>
+				<h3 style="text-align:center"> Category </h3>
+				<p> -> To set the layout like Category page :  Login admin -> <strong> Design -> Layouts -> Angara 02: Category</strong> and set the layout like:  </p>
+				<p> <img src="assets/img/layout_grid2.jpg" alt="layout grid" /> </p>
+				<br/>
+				<h3 style="text-align:center"> Detail </h3>
+				<p> -> To set the layout like Product page :  Login admin -> <strong> Design -> Layouts -> Angara 02: Product</strong> and set the layout like:  </p>
+				<p> <img src="assets/img/layout_detail2.jpg" alt="layout detail" /> </p>
+			</div><!--LAYOUT HOME2-->
+			
+			<!--LAYOUT HOME3-->
+            <div class="chapter" id="position3">
+                <div class="divider"></div>
+                <h2>Angara3</h2>
+				<p> -> To set the layout like Angara3:  Login admin -> <strong> Design -> Layouts -> Angara 03: Home</strong> and set the layout like :  </p>
+				<p> <img src="assets/img/layout_home3.jpg" alt="layout_home3" /> </p>
+				<h3 style="text-align:center"> Category </h3>
+				<p> -> To set the layout like Category page :  Login admin -> <strong> Design -> Layouts -> Angara 03: Category</strong> and set the layout like:  </p>
+				<p> <img src="assets/img/layout_grid3.jpg" alt="layout grid" /> </p>
+				<br/>
+				<h3 style="text-align:center"> Detail </h3>
+				<p> -> To set the layout like Product page :  Login admin -> <strong> Design -> Layouts -> Angara 03: Product</strong> and set the layout like:  </p>
+				<p> <img src="assets/img/layout_detail3.jpg" alt="layout detail" /> </p>
+			</div><!--LAYOUT HOME3-->
+			
+			<!--LAYOUT HOME4-->
+            <div class="chapter" id="position4">
+                <div class="divider"></div>
+                <h2>Angara4</h2>
+				<p> -> To set the layout like Angara4:  Login admin -> <strong> Design -> Layouts -> Angara 04: Home</strong> and set the layout like :  </p>
+				<p> <img src="assets/img/layout_home4.jpg" alt="layout_home4" /> </p>
+				<h3 style="text-align:center"> Category </h3>
+				<p> -> To set the layout like Category page :  Login admin -> <strong> Design -> Layouts -> Angara 04: Category</strong> and set the layout like:  </p>
+				<p> <img src="assets/img/layout_grid4.jpg" alt="layout grid" /> </p>
+				<br/>
+				<h3 style="text-align:center"> Detail </h3>
+				<p> -> To set the layout like Product page :  Login admin -> <strong> Design -> Layouts -> Angara 04: Product</strong> and set the layout like:  </p>
+				<p> <img src="assets/img/layout_detail4.jpg" alt="layout detail" /> </p>
+			</div><!--LAYOUT HOME4-->
+			
+			<!--MODULES-->
+            <div class="chapter" id="modules_setting">
+                <div class="divider"></div>
+                <h2>Modules Settings</h2>
+				<p class="notice">Read official OpenCart documentation for install, Editing and Setup a module.<br>- For Official Documentation - <a rel="nofollow" href="http://docs.opencart.com/extension/module/edit/">Click Here</a><br>- For Tutorials - <a href="#layout_position">Click Here</a><br><br>and also, See & follow Our Below module information.</p>
+				<br/>
+				<h3>TO CONFIG MODULES IN OPENCART 2.3.X, PLEASE DO LIKE STEPS BELOW:</h3>
+				<ul>
+					<li><p>Login your opencart admin</p></li>
+					<li><p>Go to<strong> Extensions -> Extensions -> Choose the extension type -> Modules </strong></p></li>
+					<li><p>Find modules you want to config -> Edit -> Config according to you.</p></li>
+				</ul>
+				<h3>Modules in Angara</h3>
+				<ul>
+					<li><p><a href="#config_content_builder">Layout Content Builder</a></p></li>
+					<li><p><a href="#config_menu">OC Horizontal Mega Menu</a></p></li>
+					<li><p><a href="#config_vermenu">OC Vertical Megamenu</a></p></li>
+					<li><p><a href="#config_search">OC Search Category</a></p></li>
+					<li><p><a href="#config_slideshow">OC Slide show</a></p></li>
+					<li><p><a href="#config_cmsblock">OC CMS Block</a></p></li>
+					<li><p><a href="#config_tabcategory">OC Category Tabs Slider</a></p></li>
+					<li><p><a href="#config_featured_category">OC Featured Category</a></p></li>
+					<li><p><a href="#config_featured_categorytab">OC Featured Categories Tab</a></p></li>
+					<li><p><a href="#config_new">OC New Products Slider</a></p></li>
+					<li><p><a href="#config_featured">OC Featured Products Slider</a></p></li>
+					<li><p><a href="#config_onsale">OC Special Products Slider</a></p></li>
+					<li><p><a href="#config_random">OC Random Products Slider</a></p></li>
+					<li><p><a href="#config_mostviewed">OC Most Viewed Products Slider</a></p></li>
+					<li><p><a href="#config_bestseller">OC Bestseller Products Slider</a></p></li>
+					<li><p><a href="#config_countdown">OC Price Countdown</a></p></li>
+					<li><p><a href="#config_banner">Banner</a></p></li>
+					<li><p><a href="#config_blog">OC Blog</a></p></li>
+					<li><p><a href="#config_testimonial">OC Testimonials</a></p></li>
+					<li><p><a href="#config_newsletter">Oc Newsletter</a></p></li>
+					<li><p><a href="#config_layered">OC Layered Navigation Ajax</a></p></li>
+					<li><p><a href="#config_quickview">OC Product Quick View</a></p></li>
+					<li><p><a href="#rotator_image">OC Product Rotator Image</a></p></li>
+				</ul>
+			</div><!--MODULES-->
+			
+			<!--CREATE MODULE-->
+            <div class="chapter" id="create_module">
+                <div class="divider"></div>
+                <h2>Creating module to choose layout in each template (Sub module) in Opencart 2.3.x</h2>
+				<p>Example, here we will create a sub module of OC Horizontal Mega Menu(module to choose layout in each template). Below is instruction: </p>
+				<ul>
+					<li><p>Login admin -> <strong> Extensions -> Choose the extension type ->  Modules -> OC Horizontal Mega Menu </strong> -> <strong>Edit</strong> button <img src="assets/img/edit_button.jpg" alt="edit button" /></p></li>
+					<li> 
+						<p> We got :</p>
+						<p> <img src="assets/img/admin_menu.jpg" alt=" admin_menu" /> </p>
+						<p> Configure parameters as below: </p>
+						<ul>
+							<li><p><strong>Module Name </strong> - Input name of sub Horizontal Mega Menu</p></li>
+							<li><p><strong>Status </strong> - Set <strong> Enabled</strong> to show the Horizontal Mega Menu module.</p></li>
+							<li><p><strong>Show Home Page Link </strong> - Don't show <strong> Home </strong>: choose <strong>No</strong>,  show <strong> Home </strong>: choose <strong> Yes </strong> </p></li>
+							<li><p><strong> Number of Columns</strong> - Set number of columns of sub categories </p></li>
+							<li><p><strong> Number of Levels </strong> - Set the limit the number of links of links a user can apply to the top level of the navigation </p></li>
+							<li><p><strong>Informations, Category, Cms Links</strong> - You can add information links, product categories, cms links (link in cms block)</p></li>
+						</ul>
+					</li>
+					<li> Click <strong> Save</strong>  button to save your changes.</li>
+					<li><p> Back to <strong> Modules</strong>  list :</p>
+						<p> <img src="assets/img/ex_name_megamenu.jpg" alt=" name mega menu" /> </p>
+					</li> 
+				</ul>
+				<p><strong> *** OC Slide show </strong> module - How to create sub module to choose layout in each template is different, please see in <a href="#config_slideshow"> OC Slide show </a>.</p>
+			</div><!--CREATE MODULE-->
+			
+			<!--HEADER-FOOTER-->
+            <div class="chapter" id="header_footer">
+                <div class="divider"></div>
+                <h2>How to edit Header and Footer</h2>
+				<h3> 1. To edit <strong>Header</strong>: </h3>
+				<ul>
+					<li>Please modify this file : <strong> \catalog\view\theme\your_theme\template\common\header.tpl</strong> and then edit .</li>
+					<li>To edit text on Header : <strong> \catalog\language\en-gb\common\header.php</strong> and then edit .</li>
+				</ul>
+				<br/>
+				<h3> 2. To edit <strong> Footer </strong>: </h3>
+				<ul>
+					<li>Please modify this file  : <strong> \catalog\view\theme\your_theme\template\common\footer.tpl</strong> then edit. </li>
+					<li>To edit text on Footer : <strong> \catalog\language\en-gb\common\footer.php</strong> and then edit .</li>
+				</ul>
+				<br/>
+				<h3> 3. To edit Address on Footer: </h3>
+				<p> <img src="assets/img/ex_contact.jpg"  alt="contact" /></p>
+				<ul>
+					<li><p>Please login opencart admin</p></li>
+					<li>
+						<p>Go to <strong> System -> Settings </strong> -> Choose <strong> Default </strong> store ->  Click <strong> Store </strong> -> At  <strong> Address</strong>: Enter information about your store -> Click <strong> Save </strong> button to save information. </p>
+						<br/>
+					</li>
+				</ul>
+				<br/>
+				<br/>
+			</div><!--HEADER-FOOTER-->
+			<!--RELATED PRODUCTS-->
+            <div class="chapter" id="customize_product">
+                <div class="divider"></div>
+                <h2>How to customize thumbnail image and Related Slider in Product page</h2>
+				<p> <img src="assets/img/ex_detail.jpg"  alt="detail ex" /></p>
+				<p><i>=> To customize two modules, please modify this file : \catalog\view\theme\your_theme\template\product\product.tpl </i></p>
+			</div><!--RELATED PRODUCTS-->
+			
+			<!--LAYOUT CONTENT BUILDER-->
+            <div class="chapter" id="config_content_builder">
+                <div class="divider"></div>
+                <h2>Config Layout Content Builder</h2>
+				<p><i><strong>Layout Content Builder</strong> is an OpenCart 2.x extension which help you can design layout, position, modules follow your mind. It is a module basically, so it is easy to install and use. And of course, Layout Builder is very useful for your website.</i></p>
+				<p><strong> Please see at <a href="../layout_content_builder/index.html">Layout Content Builder</a> to know about how to add modules, edit modules,.. in this module.</strong></p>
+				<h4><strong>Layout Content Builder for each home:</strong></h4>
+				<p><strong>***Angara1</strong>: Layout Content Builder - Home Page 01</p>
+				<p> <img src="assets/img/builder_home1.jpg" alt="layout content builder home" /> </p>
+				<p><strong>***Angara2</strong>: Layout Content Builder - Home Page 02</p>
+				<p> <img src="assets/img/builder_home2.jpg" alt="layout content builder home" /> </p>
+				<p><strong>***Angara3</strong>: Layout Content Builder - Home Page 03</p>
+				<p> <img src="assets/img/builder_home3.jpg" alt="layout content builder home" /> </p>
+				<p><strong>***Angara4</strong>: Layout Content Builder - Home Page 04</p>
+				<p> <img src="assets/img/builder_home4.jpg" alt="layout content builder home" /> </p>
+			</div>
+			<!--LAYOUT CONTENT BUILDER-->
+			
+			<!--SEARCH CATEGORY-->
+            <div class="chapter" id="config_search">
+                <div class="divider"></div>
+                <h2>OC Search Category</h2>
+				<p> <img src="assets/img/ex_search_category.jpg" alt="search category" /> </p>
+				<p><i>This module helps customers can find products in each category.</i></p>
+				<p> To config this module: </p>
+				<ul>
+					<li><p> Login your opencart admin</p></li> 
+					<li><p>Go to <strong> Extensions -> Extensions -> Choose the extension type -> Modules </strong> -> Find name <strong>OC Search Category</strong> -> <strong> Edit </strong> button  <img src="assets/img/edit_button.jpg" alt="edit button" /></p>
+						<p> <img src="assets/img/admin_search.jpg" alt="admin search category" /> </p>
+						<ul>
+							<li><p><strong> Enable Search by Category </strong> - <strong> Enabled </strong> to use this module</p></li>
+							<li><p><strong> Enable Ajax Search </strong> - Set <strong> Enabled </strong> to use ajax search, <strong> Disabled </strong> if don't want to use it.</p></li>
+							<li><p><strong> Ajax Loader Image </strong> - Click this to upload image when ajax loading.</p></li>
+							<li><p><strong> Show Product Image </strong> - Set <strong> Enabled </strong> to show product image in search result.</p></li>
+							<li><p><strong> Show Product Price</strong> - Set <strong> Enabled </strong> to show product price in search result.</p></li>
+						</ul>
+					</li>
+				</ul>
+			</div><!--SEARCH CATEGORY-->
+			
+			<!--HOZMEGAMENU-->
+            <div class="chapter" id="config_menu">
+                <div class="divider"></div>
+                <h2>Config Horizontal Mega Menu (Hozmegamenu)</h2>
+				<p> <img src="assets/img/ex_menu.jpg" alt="menu"  /> </p>
+				<p><i>***<strong>Horizontal Mega Menu</strong> gives you ability to create a huge sitemap-like menu with links to every page. Here you can navigate users with not only text but also videos and images.</i></p>
+				<p> * If you want to config or edit add categories, add links, ... to Hozmegamenu , please login Admin -> <strong>  Extensions -> Extensions -> Choose the extension type ->  Modules </strong> -> Find name <strong> OC Horizontal Mega Menu - Horizontal Menu </strong>(sub module of OC Horizontal Mega Menu) -> Config/add categories/add links/static blocks/remove(links, categories,..) according to you. </p>
+				<p><strong> Please see at <a href="../megamenu/index.html">Horizontal Mega Menu</a> to know about how to add categories, add links, add static blocks,.. in Horizontal Mega Menu</strong></p>
+				<h3>1. How to config this module</h3>
+				<ul>
+					<li><p> Login your opencart admin</p></li> 
+					<li><p>Go to <strong> Extensions -> Extensions -> Choose the extension type -> Modules </strong> -> <strong> OC Horizontal Mega Menu - Horizontal Menu</strong>  (sub OC Horizontal Mega Menu in each template)-> Click <strong> Edit</strong> button <img src="assets/img/edit_button.jpg" alt="edit_button"  /></p></li>
+					<li> 
+						<p> We got :</p>
+						<p> <img src="assets/img/admin_menu.jpg" alt="admin menu" />  then config according to you.</p>
+						<p> Configure parameters as below: </p>
+						<ul>
+							<li><p><strong>Module Name </strong> - Input name of sub OC Horizontal Mega Menu</p></li>
+							<li><p><strong>Status </strong> - Set <strong> Enabled</strong> to show the OC Horizontal Mega Menu module.</p></li>
+							<li><p><strong>Show Home Page Link </strong> - Don't show <strong> Home </strong>: choose <strong>No</strong>,  show <strong> Home </strong>: choose <strong> Yes </strong> </p></li>
+							<li><p><strong> Number of Columns</strong> - Set number of columns of sub categories </p></li>
+							<li><p><strong> Number of Levels </strong> - Set the limit the number of links of links a user can apply to the top level of the navigation </p></li>
+							<li><p><strong>Informations, Category, Cms Links</strong> - You can add information links, product categories, cms links (link in cms block)</p></li>
+						</ul>
+					</li>
+				</ul>
+				<br/>
+				<h3>2. Edit links on Megamenu:</h3>
+				<p> <img src="assets/img/ex_menu_links.jpg" alt="ex_menu_links" /></p>
+				<ul>
+					<li><p> Login your opencart admin</p></li> 
+					<li><p>Go to <strong> Extensions -> Extensions -> Choose the extension type -> Modules </strong> -> <strong> OC CMS Block</strong> -> <strong> Add New </strong> button  <img src="assets/img/add_new.jpg" alt="add new button" /> -> Click <strong> List Cms </strong> -> Click <strong> Configuration</strong> at cms blocks: </p></li>
+					<li>
+						<ul>
+							<li><p>Link(1) - Choose <strong> New Products</strong></p>
+							</li>
+							<li><p>Link(2) - Choose <strong> Bestseller</strong></p></li>
+							<li><p>Link(3) - Choose <strong> Special</strong></p></li>
+							<li><p>Link(4) - Choose <strong> Contact Us</strong></p></li>
+							<p>=> At <strong> Link </strong> : Change url of the page according to you</p>
+						</ul>
+					</li>
+					<li><p> Click <strong>Save</strong> button to save your changes.</p></li>
+				</ul>
+				
+				<br/>
+				<h3>3. How to add these link on OC Horizontal Mega Menu</h3>
+				<p> <img src="assets/img/ex_menu_links.jpg" alt="menu links"  /> </p>
+				<p>=> To add these link: </p>
+				<ol>
+					<li><p>Login opencart admin -> <strong> Extensions -> Extensions -> Choose the extension type -> Modules -> OC CMS Block -> Add New <img src="assets/img/add_button.jpg" alt="add new button" /> -> List Cms -> Add New<img src="assets/img/add_button.jpg" alt="add new button" /></strong></p>
+						<p> <img src="assets/img/add_new_block.jpg" alt="add new block"  /> </p>
+						<ul>
+							<li><p><strong> Type</strong> : Choose <strong> Link </strong></p></li>
+							<li><p><strong> Identify</strong> : Enter id of cms block</p></li>
+							<li><p><strong> Link </strong> : Type url of the page.</p>
+								<ul>
+									<li><p><strong> New Products</strong> : <strong> /index.php?route=product/ocnewproduct</strong></p></li>
+									<li><p><strong> Bestseller</strong> : <strong> /index.php?route=product/ocbestseller</strong></p></li>
+									<li><p><strong> Special</strong> : <strong> /index.php?route=product/special</strong></p></li>
+									<li><p><strong> Contact Us</strong> : <strong> /index.php?route=information/contact</strong></p></li>
+								</ul>
+							</li>
+							<li><p><strong> Status </strong> : Set <strong> Enabled </strong></p></li>
+							<li><p><strong> Stores </strong> : Choose <strong> Default Store </strong></p></li>
+							<li><p><strong> Title </strong> : Enter title of cms block (title of Link)</p></li>
+						</ul>
+					</li>
+					<li><p>Click <strong> Extensions -> sub module of OC Horizontal Mega Menu</strong> -> At <strong> Cms Links </strong> : Choose title of link(title of cms block) you've created -> <strong> Add -> Save</strong> </p></li>
+				</ol>
+				<br/>
+			</div><!--HOZMEGAMENU-->
+			
+			<!--VERTICAL MEGAMENU-->
+			<div class="chapter" id="config_vermenu">
+                <div class="divider"></div>
+                <h2>OC Vertical Mega Menu</h2>
+				<p> <img src="assets/img/ex_vermenu.jpg" alt="vermenu"  /> </p>
+				<h3> 1. Configuration</h3>
+				<ul>
+					<li><p> Login your opencart admin</p></li> 
+					<li><p>Go to <strong> Extensions -> Extensions -> Choose the extension type -> Modules </strong> -> <strong> OC Vertical Megamenu - Vertical Menu </strong> (sub module of OC Vertical Mega Menu in each template) -> <strong> Edit </strong> button  <img src="assets/img/edit_button.jpg" alt="edit button" /></p></li>
+					<li> 
+						<p> We got :</p>
+						<p> <img src="assets/img/admin_vermenu.jpg" alt="admin vermenu" />  then config according to you.</p>
+						<p> Configure parameters as below: </p>
+							<ul>
+								<li><p><strong>Module Name </strong> - Input name of sub Vertical Mega Menu</p></li>
+								<li><p><strong>Status </strong> - Set <strong> Enabled</strong> to show the Vertical Mega Menu module.</p></li>
+								<li><p><strong>Show homepage </strong> - Don't show <strong> Home </strong>: choose <strong>No</strong>,  show <strong> Home </strong>: choose <strong> Yes </strong> </p></li>
+								<li><p><strong> Number of items</strong> - Set number of items (links, categories) will be shown. </p></li>
+								<li><p><strong> Show number columns</strong> - Set number of columns of sub categories </p></li>
+								<li><p><strong> Show Levels </strong> - Set the limit the number of links of links a user can apply to the top level of the navigation </p></li>
+							</ul>
+						<p><strong> Please see at <a href="http://towerthemes.com/docs/vmegamenu/"> OC Vertical Megamenu </a> to know about how to add categories, add links, add static blocks,.. in OC Vertical Megamenu</strong></p>
+					</li>
+				</ul>
+				<br/>
+			</div>
+		<!--VERTICAL MEGAMENU-->
+			
+			<!--SLIDESHOW-->
+            <div class="chapter" id="config_slideshow">
+                <div class="divider"></div>
+                <h2>Config OC Slide show</h2>
+				<p> <img src="assets/img/ex_slideshow.jpg" alt="" /> </p>
+				<p><i> *** This module performs images and texts in slideshow.</i></p>
+				<ul>
+					<li><p><strong>#Angara1</strong>: You should cut background images with size 900 x 490 pixels.</p></li>
+					<li><p><strong>#Angara2</strong>: You should cut background images with size 870 x 484 pixels.</p></li>
+					<li><p><strong>#Angara3</strong>: You should cut background images with size 900 x 516 pixels.</p></li>
+					<li><p><strong>#Angara4</strong>: You should cut background images with size 870 x 510 pixels.</p></li>
+				</ul>
+				<br/>
+				<h3>1. Configuration & change images of slide show </h3>
+				<ul> 
+					<li> <p> Login your opencart admin</p> </li>
+					<li> 
+						<p>Go to <strong> Extensions -> Extensions -> Choose the extension type -> Modules </strong> -> Find name <strong> OC Slide show </strong> -> Choose <strong>Add New</strong> button <img src="assets/img/add_button.jpg" alt="edit" /></p>
+					</li>
+					<li> 
+						<p> Click <strong> Slides Manager </strong> </p>
+						<p> <img src="assets/img/slideshow1.jpg" alt="slideshow1"  /> </p>
+						<p> At <strong> Banner Name </strong>, choose edit : </p>
+						<p> <img src="assets/img/slideshow2.jpg" alt="slideshow2" /> </p>
+						<ul>
+							<li><p> - <strong>#Angara1</strong> : Choose edit<strong> Home Slideshow Home1 </strong></p> </li>
+							<li><p> - <strong>#Angara2</strong> : Choose edit<strong> Home Slideshow Home2</strong></p></li>
+							<li><p> - <strong>#Angara3</strong> : Choose edit<strong> Home Slideshow Home3 </strong></p></li>
+							<li><p> - <strong>#Angara4</strong> : Choose edit<strong> Home Slideshow Home4</strong></p></li>
+						</ul>
+						<p> Click <strong> Banner 1, Banner 2 ... </strong> -> You can config slide such as change images, titles, link according to you.  </p> 
+					</li>	
+				</ul>
+				<br/>
+				<h3>2. Create sub module of OC Slide show</h3>
+				<ul> 
+					<li> <p> Login your opencart admin</p> </li>
+					<li> <p>Go to <strong> Extensions -> Extensions -> Choose the extension type -> Modules </strong> -> Find name <strong>OC Slide show</strong> -> Choose <strong>Edit</strong> button <img src="assets/img/add_button.jpg" alt="edit_button"  /></p></li>
+					<li> 
+						<p> Click <strong> Slides Manager </strong> </p>
+						<p> <img src="assets/img/slideshow1.jpg" alt="Slides show1" /> </p>
+						<p> Click <strong> Add new </strong> button <img src="assets/img/new1.jpg" alt="add new"  /></p>
+						<p> <img src="assets/img/slideshow3.jpg" alt="slide show3"  /> </p>
+						<p> -> Create name and config for this slider.</p>
+						<p> -> Click <strong> Add Item </strong> to add item for this slider and add text, image, choose effect for it.</p> 
+					</li>
+					<li> <p> Click <strong> Save </strong> to save this slider </p> </li>
+					<li> <p> Click <strong> OC Slide show </strong></p>
+						 <p> <img src="assets/img/slideshow4.jpg" alt="OC Slide show" /> </p>
+					</li>
+					<li> <p> We got: </p> 
+						<p> <img src="assets/img/slideshow5.jpg" alt="admin slide show"  /> </p>
+						<p> Configure parameters as below: </p>
+						<ul>
+							<li><p><strong>Name </strong> - Input name of sub OC Slide show </p></li>
+							<li><p><strong>Status </strong> - Set <strong> Enabled</strong> to show the OC Slide show module.</p></li>
+							<li><p><strong> Banners </strong> - Choose the slide show you want to use </p></li>
+							<li><p><strong> Width of Banner </strong> - Set width of slide show </p></li>
+							<li><p><strong> Height of Banner </strong> - Set height of slide show  </p></li>
+						</ul>
+						<p> -> Click <strong> Save </strong> to save this sub module </p>
+					</li>
+				</ul>
+			</div><!--SLIDESHOW--->
+			
+			<!--CMS BLOCK-->
+            <div class="chapter" id="config_cmsblock">
+                <div class="divider"></div>
+                <h2>Config OC CMS Block</h2>
+				<i> Cms block helps you show links, images and text.</i>
+				<h3>1. Edit static blocks </h3>
+				<ul> 
+					<li> <p>Please see at images of homepage, products page, detail page to see names of cms block </p></li>
+					<li> <p> To edit a static block, please see in each Homepage image -> Find sub module of each OC CMS Block </p></li>
+					<li> <p> Login your opencart admin</p></li>
+					<li><p> Go to <strong>Extensions -> Extensions -> Choose the extension type ->  Modules -> OC CMS Block </strong> -> Click <strong> Add New </strong> <img src="assets/img/add_button.jpg" alt="edit_button"  /> -> Click <strong> List Cms </strong> </p></li>
+					<li> <p> At <strong>Title</strong>, choose Cms Block you want to edit, click <strong>Configuration</strong>: </p>
+						<p> <img src="assets/img/edit_block.jpg" alt="edit block" /> </p>
+						<p> Edit title, content, identify, ... of static block. Click <strong> Code View </strong> (in description table) to show HTML of the static block</p>
+						<p> <img src="assets/img/1.jpg" alt="edit block1" /> </p>
+						<p>-> At here, to change link inside (src="our link") by (src="your link") or (data-original="our link") by (data-original="your link") (if that have line "data-original")</p>	
+						<p> <img src="assets/img/2.jpg" alt="edit block2" /> </p>
+						<p> <img src="assets/img/3.jpg" alt="edit block3" /> </p>
+						<p><i><strong>***One more thing, if you use default opencart 2.3.0.2, it have 1 bug. You can not save code cms block. To correct that error, after you have changed code in "Code View", please click once more time that "Code View" button. Then save.</strong></i></p>
+					</li>
+					<li> <p> Click <strong> Save </strong> button when finish. </p> </li>
+				</ul>
+				<h4>Example</h4>
+				<p> <img src="assets/img/ex_block.jpg" alt="cms block" /> </p>
+				<p>To edit the static block above in <strong>Angara1</strong>, please do like steps below:</p>
+				<ul> 
+					<li> <p>Please see at <a href="#layout1">image of Angara1</a></p></li>
+					<li> <p> Find part you want to edit, name is : <strong>OC CMS Block (Header Icon)</strong> </p></li>
+					<li> <p> Login your opencart admin</p></li>
+					<li><p> Go to <strong>Extensions -> Extensions -> Choose the extension type -> Modules -> Cms block </strong>-> Click <strong> Add New </strong> <img src="assets/img/add_button.jpg" alt="edit_button"  /> -> Click <strong> List Cms </strong> </p></li>
+					<li> <p> At <strong>Title</strong>, choose <strong>Banner Static Home123</strong> , click <strong>Configuration</strong> </p>
+						<p> -> Edit title, content, identify, ... of this static block.</p>
+					</li>
+					<li> <p> Click <strong> Save </strong> button when finish. </p> </li>
+				</ul>
+				<br/>
+				<h3>2. Add blocks to the list cms</h3>
+					<ul> 
+						<li> <p> Login your opencart admin</p> </li>
+						<li> 
+							<p>Go to <strong> Extensions -> Extensions -> Choose the extension type -> Modules </strong> -> Find name <strong> OC CMS Block </strong> -> Choose <strong>Add New</strong> button <img src="assets/img/add_button.jpg" alt="edit"  /></p>
+						</li>
+						<li> <p> Click <strong> List Cms </strong> </p> </li>
+						<li> <p> Click <strong> Add New </strong> button </p>
+							
+							<p> <img src="assets/img/add_block.jpg" alt="add block" /> </p>
+							<p> Type title, content, identify,... of static block.</p>
+						</li>
+						<li> <p> Click <strong> Save </strong> button when finish. </p> </li>
+					</ul>
+				<br/>
+				<h3> 3. Create Cms block to choose layout</h3> 
+				<p> <img src="assets/img/ex_name_block.jpg" alt="example name block" /> </p>
+				<ul>
+					<li><p> Login your opencart admin</p></li> 
+					<li> 
+						<p>Go to <strong> Extensions -> Extensions -> Choose the extension type -> Modules </strong> -> Find name <strong> Cms block </strong> -> Choose <strong> Add New </strong> button <img src="assets/img/add_button.jpg"  alt="edit" /></p>
+					</li>
+					<li> 
+						<p> We got :</p>
+						<p> <img src="assets/img/ex_name_block2.jpg" alt="example name block2" /> </p>
+					</li>
+					<li> Click <strong> Save</strong>  button to save your changes.</li>
+				</ul>
+			</div><!--CMS BLOCK-->
+			
+			<!--OC CATEGORY TAB SLIDER-->
+            <div class="chapter" id="config_tabcategory">
+                <div class="divider"></div>
+                <h2> OC Category Tabs Slider </h2>
+				<p> <img src="assets/img/ex_tabcategory.jpg" alt="tab category" /> </p>
+				<p> <i>***This module shows products of each category in slider in each tab. </i></p>
+				<h3> How to config/edit/show categories/upload images in this module.</h3>
+				<ul>
+					<li><p>Login your opencart admin</p></li> 
+					<li><p>Go to <strong> Extensions -> Modules </strong> -> Find name <strong> OC Category Tabs Slider -  Category Tabs Home1</strong> (sub module of OC Category Tabs Slider in each template) -> <strong> Edit </strong> button  <img src="assets/img/edit_button.jpg" alt="edit button" /></p></li>
+					<li> 
+						<p> We got :</p>
+						<p> <img src="assets/img/admin_tabcategory.jpg" alt="admin tab category" /> </p>
+						<p> Config some parameters as below : </p>
+						<ul>
+							<li> <p><strong> Module Names </strong> - <strong> Name of this module to choose layout (Sub module of OC Category Tabs Slider). </strong></p></li>
+							<li> <p><strong> Title </strong> - Title of sub module of OC Category Tabs Slider</p></li>
+							<li> <p><strong> Categories </strong> - <strong> Enter names of categories you want to show. </strong></p></li>
+							<li> <p><strong> Use Thumbnail Image </strong> - Set <strong> Enabled </strong> to use thumbnail image. </p></li>
+							<li> <p><strong> Image </strong> - <strong> Upload the the image of sub OC Category Tabs Slider</strong></p></li>
+							<li><p><strong> Items </strong> - Number of products will be shown. </p></li>
+							<li> <p><strong> Rows Products </strong> - Number of rows  will be displayed. </p></li>
+							<li><p><strong> Limit </strong> - Number of products will be allowed in each tab. </p></li>
+							<li> <p><strong> Width, Height</strong> - Image size will be displayed. </p></li>
+						</ul>
+					</li>
+				</ul>
+				<br/>
+			</div><!--OC CATEGORY TAB SLIDER-->
+			
+			<!--OC NEW PRODUCT SLIDER-->
+            <div class="chapter" id="config_new">
+                <div class="divider"></div>
+                <h2>OC New Products Slider</h2>
+				<p> <img src="assets/img/ex_new.jpg" alt="new" /> </p>
+				<p><i>*** This module shows new products in slider.</i></p>
+				<h3> 1. Configuration </h3>
+				<ul>
+					<li><p>Login your opencart admin</p></li> 
+					<li><p>Go to <strong> Extensions -> Modules </strong> -> <strong> OC New Products Slider - New Product Home2</strong>(sub of OC New Products Slider in each template)</p></li>
+					<li> 
+						<p> We got :</p>
+						<p> <img src="assets/img/admin_new.jpg" alt="admin product slider" /> </p>
+						<p> Configure some parameters as below: </p>
+						<ul>
+							<li><p><strong> Module Name </strong> - Input name of sub OC New Products Slider. </p></li>
+							<li><p><strong> Title </strong> - Enter title of module with each language. </p></li>
+							<li><p><strong> Items </strong> - Set number of products will be displayed per row. </p></li>
+							<li> <p><strong> Rows Products </strong> - Number of rows  will be displayed. </p></li>
+							<li><p><strong> Limit </strong> - Number of products will be allowed in each tab. </p></li>
+							<li> <p><strong> Width, Height</strong> - Image size will be displayed. </p></li>
+						</ul>
+					</li>
+				</ul>
+				<br/>
+				<p><i>=> To customize this module, please modify this file : catalog\view\theme\your_theme\template\extension\module\ocnewproductslider.tpl</i></p>
+			</div><!--OC NEW PRODUCT SLIDER-->
+			
+			<!--OC SPECIAL PRODUCT SLIDER-->
+            <div class="chapter" id="config_onsale">
+                <div class="divider"></div>
+                <h2>Config OC Special Products Slider </h2>
+				<p> <img src="assets/img/ex_onsale.jpg" alt="special" /> </p>
+				<p><i>***This module shows special products in slider.</i></p>
+				<h3>1. Configuration </h3>
+				<ul>
+					<li><p>Login your opencart admin</p></li> 
+					<li> 
+						<p>Go to <strong> Extensions -> Modules </strong> -> <strong> OC Special Products Slider - Special Products Home2 </strong> (sub module of OC Special Products Slider in each template) </p>
+					</li>
+					<li> 
+						<p> We got :</p>
+						<p> <img src="assets/img/admin_onsale.jpg" alt="admin onsale product slider" /> </p>
+						<p> Configure some parameters as below: </p>
+						<ul>
+							<li><p><strong> Module Name </strong> - Input name of sub OC Special Products Slider. </p></li>
+							<li><p><strong> Use Rotator Image </strong> - Set <strong> Enabled </strong> to use rotator image. </p></li>
+							<li><p><strong> Items </strong> - Set number of products will be displayed per row. </p></li>
+							<li> <p><strong> Rows Products </strong> - Number of rows  will be displayed. </p></li>
+							<li><p><strong> Limit </strong> - Number of products will be allowed in each tab. </p></li>
+							<li> <p><strong> Width, Height</strong> - Image size will be displayed. </p></li>
+						</ul>
+					</li>
+				</ul>
+				<br/>
+				<h3>2. How to set special products  </h3>
+				<p> =>>Please see at <a href="#special_product"> How to set special products </a> to know how to set special products.</p>
+				<p><i>=> To customize this module, please modify this file : catalog\view\theme\your_theme\template\extension\module\ocspecialproductslider.tpl</i></p>
+			</div><!--OC SPECIAL PRODUCT SLIDER-->
+			
+			<!--OC FEATURED PRODUCT SLIDER-->
+            <div class="chapter" id="config_featured">
+                <div class="divider"></div>
+                <h2>Config OC Featured Products Slider</h2>
+				<p> <img src="assets/img/ex_featured.jpg" alt="featured" /> </p>
+				<p><i>***This module shows featured products in slider.</i></p>
+				<h3> 1. Configuration </h3>
+				<ul>
+					<li><p>Login your opencart admin</p></li> 
+					<li> 
+						<p>Go to <strong> Extensions -> Modules </strong> -> <strong> OC Featured Products Slider - Featured Products Home1 </strong>(sub module of OC Featured Products Slider in each template) -> <strong> Edit </strong> button  <img src="assets/img/edit_button.jpg" alt="edit button" /></p>
+					</li>
+					<li> 
+						<p> We got :</p>
+						<p> <img src="assets/img/admin_featured.jpg" alt="admin featured product slider" /> </p>
+						<p> Configure some parameters as below: </p>
+						<ul>
+							<li><p><strong> Module Name </strong> - Input name of sub OC Featured Products Slider. </p></li>
+							<li><p><strong> Items </strong> - Set number of products will be displayed per row. </p></li>
+							<li> <p><strong> Rows Products </strong> - Number of rows  will be displayed. </p></li>
+							<li><p><strong> Limit </strong> - Number of products will be allowed in each tab. </p></li>
+							<li> <p><strong> Width, Height</strong> - Image size will be displayed. </p></li>
+						</ul>
+					</li>
+				</ul>
+				<br/>
+				<h3> 2. How to set featured products in this module </h3>
+				<ul>
+					<li><p>Login your opencart admin</p></li> 
+					<li> 
+						<p>Go to <strong> Extensions -> Modules </strong> -> <strong> OC Featured Products Slider - Featured Products Home1 </strong>(sub module of OC Featured Products Slider) -> <strong> Edit </strong> button  <img src="assets/img/edit_button.jpg" alt="edit button" /></p>
+					</li>
+					<li> 
+						<p> We got :</p>
+						<p> <img src="assets/img/set_featured2.jpg" alt="set featured product" /> </p>
+						<p> -> At<strong> Products</strong> : Enter names of products you want to set as featured.</p>
+						<p>-> Click <strong> Save</strong>  button</p>
+					</li>
+				</ul>
+				<p><i>=> To customize this module, please modify this file : catalog\view\theme\your_theme\template\extension\module\ocfeatureslider.tpl</i></p>
+			</div><!--OC FEATURED PRODUCT SLIDER-->
+			
+			<!--OC RANDOM PRODUCT SLIDER-->
+            <div class="chapter" id="config_random">
+                <div class="divider"></div>
+                <h2>Config OC Random Products Slider</h2>
+				<p> <img src="assets/img/ex_random.jpg" alt="random" /> </p>
+				<p><i>***This module shows random products in slider.</i></p>
+				<h3> 1. Configuration </h3>
+				<ul>
+					<li><p>Login your opencart admin</p></li> 
+					<li> 
+						<p>Go to <strong> Extensions -> Modules </strong> -> <strong> OC Random Products Slider - Random Products </strong> -> <strong> Edit </strong> button  <img src="assets/img/edit_button.jpg" alt="edit button" />: </p>
+					</li>
+					<li> 
+						<p> We got :</p>
+						<p> <img src="assets/img/admin_random.jpg" alt="admin random product slider" /> </p>
+						<p> Configure some parameters as below: </p>
+						<ul>
+							<li><p><strong> Module Name </strong> - Input name of sub OC Random Products Slider. </p></li>
+							<li><p><strong> Items </strong> - Set number of products will be displayed per row. </p></li>
+							<li> <p><strong> Rows Products </strong> - Number of rows  will be displayed. </p></li>
+							<li><p><strong> Limit </strong> - Number of products will be allowed in each tab. </p></li>
+							<li> <p><strong> Width, Height</strong> - Image size will be displayed. </p></li>
+							<li> <p><strong> Show Sale/New Label </strong> - Set <strong>Yes</strong> to show Sale/New label </p></li>
+						</ul>
+					</li>
+				</ul>
+				<p><i>=> To customize this module, please modify this file : catalog\view\theme\your_theme\template\extension\module\ocrandomslider.tpl</i></p>
+			</div><!--OC RANDOM PRODUCT SLIDER-->
+			
+			<!--OC BESTSELLER PRODUCT SLIDER-->
+            <div class="chapter" id="config_bestseller">
+                <div class="divider"></div>
+                <h2>Config OC Bestseller Products Slider </h2>
+				<p> <img src="assets/img/ex_bestseller.jpg" alt="bestseller" /> </p>
+				<p><i>***This module shows bestseller products in slider. You need to purchase products and checkout orders  to show bestseller products on this module.</i></p>
+				<ul>
+					<li><p>Login your opencart admin</p></li> 
+					<li> 
+						<p>Go to <strong> Extensions -> Extensions -> Choose the extension type -> Modules </strong> -> <strong> OC Bestseller Products Slider - Bestseller Products Home1 </strong> -> <strong> Edit </strong> button  <img src="assets/img/edit_button.jpg" alt="edit button" /></p>
+					</li>
+					<li> 
+						<p> We got :</p>
+						<p> <img src="assets/img/admin_bestseller.jpg" alt="admin bestseller product slider" /> </p>
+						<p> Configure some parameters as below: </p>
+						<ul>
+							<li><p><strong> Module Name </strong> - Input name of sub OC Bestseller Products Slider. </p></li>
+							<li><p><strong> Items </strong> - Set number of products will be displayed per row. </p></li>
+							<li> <p><strong> Rows Products </strong> - Number of rows  will be displayed. </p></li>
+							<li><p><strong> Limit </strong> - Number of products will be allowed in each tab. </p></li>
+							<li> <p><strong> Width, Height</strong> - Image size will be displayed. </p></li>
+						</ul>
+					</li>
+				</ul>
+				<p><i>=> To customize this module, please modify this file : catalog\view\theme\your_theme\template\extension\module\ocbestproductslider.tpl</i></p>
+			</div><!--OC BESTSELLER PRODUCT SLIDER-->
+			
+			<!--OC MOSTVIEWED PRODUCT SLIDER-->
+            <div class="chapter" id="config_mostviewed">
+                <div class="divider"></div>
+                <h2>Config OC Most Viewed Products Slider</h2>
+				<p> <img src="assets/img/ex_mostviewed.jpg" alt="mostviewed" /> </p>
+				<p><i>***This module shows top viewed products in slider.</i></p>
+				<h3> 1. Configuration </h3>
+				<ul>
+					<li><p>Login your opencart admin</p></li> 
+					<li> 
+						<p>Go to <strong> Extensions -> Modules </strong> -> <strong> OC Most Viewed Products Slider - Mostviewed Products Home1</strong>-><strong> Edit </strong> button  <img src="assets/img/edit_button.jpg" alt="edit button" />: </p>
+					</li>
+					<li> 
+						<p> We got :</p>
+						<p> <img src="assets/img/admin_mostviewed.jpg" alt="admin mostviewed product slider" /> </p>
+						<p> Configure some parameters as below: </p>
+						<ul>
+							<li><p><strong> Module Name </strong> - Input name of sub OC Mostviewed Products Slider. </p></li>
+							<li><p><strong> Items </strong> - Set number of products will be displayed per row. </p></li>
+							<li><p><strong> Rows Products </strong> - Number of rows  will be displayed. </p></li>
+							<li><p><strong> Limit </strong> - Number of products will be allowed in each tab. </p></li>
+							<li><p><strong> Width, Height</strong> - Image size will be displayed. </p></li>
+							<li><p><strong> Show Sale/New Label </strong> - Set <strong>Yes</strong> to show Sale/New label </p></li>
+						</ul>
+					</li>
+				</ul>
+				<br/>
+				<p><i>=> To customize this module, please modify this file : catalog\view\theme\your_theme\template\extension\module\ocmostproduct.tpl</i></p>
+			</div><!--OC MOSTVIEWED PRODUCT SLIDER-->
+			
+			<!--OC FEATURED CATEGORY-->
+            <div class="chapter" id="config_featured_category">
+                <div class="divider"></div>
+                <h2>Config OC Featured Category </h2>
+				<p> <img src="assets/img/ex_featuredcategory.jpg" alt="tab category featured" /> </p>
+				<p><i> *** This module shows the category and thumbnail image of that category with subcategories.</i></p>
+				<h3>1. Configuration </h3>
+				<ul>
+					<li><p>Login your opencart admin</p></li> 
+					<li> 
+						<p>Go to <strong> Extensions -> Modules </strong> -> <strong> OC Featured Category - Featured Category Home1</strong> -> <strong> Edit </strong> button  <img src="assets/img/edit_button.jpg" alt="edit button" /></p>
+					</li>
+					<li>
+						<p> We got :</p>
+						<p> <img src="assets/img/admin_featuredcategory.jpg" alt="admin category tab featured" /> </p>
+						<p> Config some parameters as below : </p>
+						<ul>
+							<li><p><strong> Module Name</strong> - <strong> Name of this module to choose layout</strong></p></li>
+							<li><p><strong> Title </strong> - Title of sub module of OC Featured Category</p></li>
+							<li><p><strong> Use Rotator Image </strong> - Set <strong> Enabled </strong> to use rotator image.</p></li>
+							<li><p><strong> Items </strong> - Number of products will be shown. </p></li>
+							<li><p><strong> Rows Products </strong> - Number of rows  will be displayed. </p></li>
+							<li><p><strong> Limit </strong> - Number of products will be allowed in each tab. </p></li>
+							<li><p><strong> Width, Height</strong> - Image size will be displayed. </p></li>
+						</ul>
+					</li>
+				</ul>
+				<br/>
+				<h3>2. How to show category and thumbnail image on OC Featured Category: </h3>
+				<p> <img src="assets/img/ex_featuredcategory_thumbnail.jpg" alt="ex_featuredcategory_thumbnail"  /> </p>
+				<p><i>=> You should upload thumbnail image has size : 268x268 pixels.</i></p>
+				<ul>
+					<li><p> Login your opencart admin</p></li> 
+					<li><p>Go to <strong> Catalog -> Categories -> Categories Thumbnail </strong> -> choose category you want to show thumbnail image</p>
+						<p> <img src="assets/img/set_thumbnail_category3.jpg" alt="set thumbnail image 3"  /> </p>
+					</li>
+				</ul>
+				<br/>
+				<p><i>=> To customize this module, please modify this file : catalog\view\theme\your_theme\template\extension\module\ocfeaturedcategory.tpl</i></p>
+			</div><!--OC FEATURED CATEGORY-->
+			
+			
+			<!--OC FEATURED CATEGORY TAB-->
+            <div class="chapter" id="config_featured_categorytab">
+                <div class="divider"></div>
+                <h2>Config OC Featured Categories Tab </h2>
+				<p> <img src="assets/img/ex_featuredcategorytab.jpg" alt="tab category featured tab" /> </p>
+				<p><i> *** This module shows thumbnail image and products of categories in slider.</i></p>
+				<h3>1. Configuration </h3>
+				<ul>
+					<li><p>Login your opencart admin</p></li> 
+					<li> 
+						<p>Go to <strong> Extensions -> Modules </strong> -> <strong> OC Featured Categories Tab - Featured Categories Tab Home2</strong> (sub module of OC Featured Categories Tab in each template) -> <strong> Edit </strong> button  <img src="assets/img/edit_button.jpg" alt="edit button" /></p>
+					</li>
+					<li>
+						<p> We got :</p>
+						<p> <img src="assets/img/admin_featuredcategorytab.jpg" alt="admin category tab featured" /> </p>
+						<p> Config some parameters as below : </p>
+						<ul>
+							<li><p><strong> Module Name</strong> - <strong> Name of this module to choose layout</strong></p></li>
+							<li><p><strong> Title </strong> - Title of sub module of OC Featured Category Tab</p></li>
+							<li><p><strong> Use Rotator Image </strong> - Set <strong> Enabled </strong> to use rotator image.</p></li>
+							<li><p><strong> Items </strong> - Number of products will be shown. </p></li>
+							<li><p><strong> Rows Products </strong> - Number of rows  will be displayed. </p></li>
+							<li><p><strong> Limit </strong> - Number of products will be allowed in each tab. </p></li>
+							<li><p><strong> Width, Height</strong> - Image size will be displayed. </p></li>
+						</ul>
+					</li>
+				</ul>
+				<br/>
+				<h3>2. How to show products and thumbnail image of a category on OC Featured Categories Tab: </h3>
+				<p> <img src="assets/img/ex_featuredcategorytab_thumbnail.jpg" alt="ex_featuredcategory_thumbnail"  /> </p>
+				<p><i>=> You should upload thumbnail image has size : 199x113 pixels.</i></p>
+				<ul>
+					<li><p> Login your opencart admin</p></li> 
+					<li><p>Go to <strong> Catalog -> Categories -> Categories Thumbnail </strong> -> choose category you want to show thumbnail image</p>
+						<p> <img src="assets/img/set_thumbnail_category4.jpg" alt="set thumbnail image 3"  /> </p>
+					</li>
+				</ul>
+				<br/>
+				<p><i>=> To customize this module, please modify this file : catalog\view\theme\your_theme\template\extension\module\ocfeaturedcategorytab.tpl</i></p>
+			</div><!--OC FEATURED CATEGORY TAB-->
+			
+			
+			<!--OC COUNTDOWN PRODUCT SLIDER-->
+            <div class="chapter" id="config_countdown">
+                <div class="divider"></div>
+                <h2>Config OC Price Countdown</h2>
+				<p> <img src="assets/img/ex_countdown.jpg" alt="countdown" /> </p>
+				<p><i>***This module shows special products with timer in slider. You must set <strong> Date Start </strong> and <strong> Date End </strong> to show countdown timer in each special product.</i></p>
+				<h3> 1. Configuration </h3>
+				<ul>
+					<li><p>Login your opencart admin</p></li> 
+					<li> 
+						<p>Go to <strong> Extensions -> Extensions -> Choose the extension type -> Modules </strong> -> <strong> OC Price Countdown - Price Countdown Home1 </strong> -> Click <strong> Edit </strong> button  <img src="assets/img/edit_button.jpg" alt="edit button" /> </p>
+					</li>
+					<li> 
+						<p> We got :</p>
+						<p> <img src="assets/img/admin_countdown.jpg" alt="admin countdown product slider" /> </p>
+						<p> Configure some parameters as below: </p>
+						<ul>
+							<li><p><strong> Module Name </strong> - Input name of sub OC Price Countdown. </p></li>
+							<li><p><strong> Items </strong> - Set number of products will be displayed per row. </p></li>
+							<li><p><strong> Limit </strong> - Number of products will be allowed in each tab. </p></li>
+							<li> <p><strong> Width, Height</strong> - Image size will be displayed. </p></li>
+						</ul>
+					</li>
+				</ul>
+				<br/>
+				<h3>2. How to set special products  </h3>
+				<p> =>>Please see at <a href="#special_product"> How to set special products </a> to know how to set special products.</p>
+				<br/>
+				<p><i>=> To customize this module, please modify this file : catalog\view\theme\your_theme\template\extension\module\occountdown.tpl</i></p>
+			</div><!--OC COUNTDOWN PRODUCT SLIDER-->
+
+			
+			<!--BANNER-->
+			<div class="chapter" id="config_banner">
+                <div class="divider"></div>
+                <h2>Banner</h2>
+				<p> <img src="assets/img/ex_banner.jpg" alt="countdown" /> </p>
+				<p><i> ***This module can show brand logos, manufacturers, branded products in slider. </i></p>
+				<h3> 1. Configuration </h3>
+				<ul>
+					<li><p> Login your opencart admin</p></li> 
+					<li><p>Go to <strong> Extensions -> Extensions -> Choose the extension type -> Modules </strong> -> <strong> Banner - Our Brands</strong> -> <strong> Edit </strong><img src="assets/img/edit_button.jpg" alt="add new" /></p>
+					</li>
+					<li>
+						<p> We got :</p>
+						<p> <img src="assets/img/admin_banner.jpg" alt="admin carousel" /> </p>
+						<p> Config some parameters as below : </p>
+						<ul>
+							<li><p><strong> Module Name </strong> - Name of sub module of Banner module</p></li>
+							<li><p><strong> Banner </strong> - Choose banner you want to show in this module.</p></li>
+							<li><p><strong> Status </strong> - Set <strong> Enabled </strong> to use this sub module. </p></li>
+							<li><p><strong> Width, Height </strong> - Item size will be displayed. </p></li>
+						</ul>
+					</li>
+				</ul>
+				<br/>
+				<h3>2. Edit banner</h3>
+				<ul>
+					<li><p> Login your opencart admin</p></li> 
+					<li> 
+						<p>Go to <strong> Design -> Banners </strong> -> <strong> Our Brands</strong></p>
+						<p> <img src="assets/img/banner1.jpg" alt="carousel1"  /> </p>
+					</li>
+					<li> Click <strong> Save</strong>  button to save your changes.</li>
+				</ul>
+				<br/>
+				<h3> 3. To create Banner, follow steps below: </h3>
+				<h4> 1. Add new banner </h4>
+				<ul>
+					<li><p> Login your opencart admin</p></li> 
+					<li><p>Go to <strong> Design -> Banners -> Add New</strong></p></li>
+					<li> 
+						<p> Type banner name, then click <strong> Add Banner </strong> </p>
+						<p> <img src="assets/img/add_banner1.jpg" alt="add banner step1" /> </p>
+
+					</li>
+					<li> 
+						<p> Type title, link, upload image </p>
+						<p> <img src="assets/img/add_banner2.jpg" alt="add banner step2"  /> </p>
+						<p> You can add many banners.</p>
+					</li>
+				</ul>
+				<br/>
+				<h4>2. Create sub Banner </h4>
+				<ul>
+					<li><p> Login your opencart admin</p></li> 
+					<li> <p>Go to <strong> Extensions -> Extensions -> Choose the extension type -> Modules -> Banner</strong></p></li>
+					<li> 
+						<p> We got :</p>
+						<p> <img src="assets/img/admin_banner.jpg" alt="admin banner" /> </p>
+						<p> Configure some parameters as below: </p>
+						<ul>
+							<li><p><strong> Module Name </strong> - Input name of sub Banner. </p></li>
+							<li><p><strong> Banner </strong> - Choose banner you've created which you want to show. </p></li>
+							<li> <p><strong> Status </strong> - Set<strong> Enabled </strong> to use this sub module. </p></li>
+							<li> <p><strong> Width, Height</strong> - Item size will be displayed. </p></li>
+						</ul>
+					</li>
+					<li> Click <strong> Save</strong>  button to save your changes.</li>
+					<li><p> Back to <strong> Modules</strong>  list :</p>
+						<p> <img src="assets/img/ex_name_banner.jpg" alt=" name banner " /></p>
+					</li> 
+				</ul>
+				<br/>
+				<p><i>=> To customize this module, please modify this file : catalog\view\theme\your_theme\template\extension\module\banner.tpl</i></p>
+			</div><!--BANNER-->
+			
+			<!--BLOG-->
+            <div class="chapter" id="config_blog">
+                <div class="divider"></div>
+                <h2> OC Blog</h2>
+				<p> <img src="assets/img/ex_blog.jpg" alt="blog" /> </p>
+				<h3> 1. How to config this module  </h3>
+				<ul>
+					<li><p> Login your opencart admin</p></li> 
+					<li><p>Go to <strong> Extensions -> Extensions -> Choose the extension type -> Modules </strong> -> <strong>OC Blog - Blog</strong> (sub of OC Blog in each template)</p></li>
+					<li> 
+						<p> We got :</p>
+						<p> <img src="assets/img/admin_blog.jpg" alt="admin blog" /> </p>
+						<p> Configure some parameters as below: </p>
+						<ul>
+							<li><p><strong> Module Name </strong> - Input name of sub module of OC Blog. </p></li>
+							<li><p><strong> Article List </strong> - Choose list of posts you want to show in this sub module. </p></li>
+							<li> <p><strong> Status </strong> - Set<strong> Enabled </strong> to use this sub module. </p></li>
+							<li> <p><strong> Article Image Width, Article Image Height</strong> - Item size will be displayed. </p></li>
+						</ul>
+					</li>
+				</ul>
+				<br/>
+				<h3>2. How to edit articles in Blog  </h3>
+				<ul>
+					<li><p> Login your opencart admin</p></li> 
+					<li> 
+						<p>Go to <strong> Blog -> Articles </strong> -> You will see a table of articles -> At the article you want to edit, choose Edit button</p>
+						<p> <img src="assets/img/edit_blog.jpg" alt="edit blog" /> </p>
+						<p> You can edit image for the article, enter contents, enter title </p>
+					</li>
+					<li><p> Click <strong> Save</strong> button when finish.</p></li>
+				</ul>
+				<br/>
+				<h3> 3. To create a OC Blog, follow steps below: </h3>
+				<h4>1. Create the article </h4>
+				<ul>
+					<li><p> Login your opencart admin</p></li> 
+					<li> 
+						<p>Go to <strong> Blog -> Articles -> Add New</strong></p>
+						<p> <img src="assets/img/add_new_blog.jpg" alt="add new blog" /> </p>
+						<p> You need to fill in article name, Introduction Text, Description, Meta Tag Title and  can upload image, write the author,... for the article </p>
+					</li>
+					<li><p> Click <strong> Save</strong> button when finish.</p></li>
+				</ul>
+				<br/>
+				<h4>2. Create articles list </h4>
+				<ul>
+					<li><p> Login your opencart admin</p></li> 
+					<li> 
+						<p>Go to <strong> Blog -> Articles List -> Add New</strong></p>
+						<p> <img src="assets/img/add_new_article_list.jpg" alt="add new article list" /> </p>
+						<p> Configure some parameters as below: </p>
+						<ul>
+							<li><p><strong> Articles List Name </strong> - Input name of list. </p></li>
+							<li><p><strong> Articles </strong> - Choose the names of articles to give in this list.</p></li>
+							<li> <p><strong> Status </strong> - Set<strong> Enabled </strong> to use this sub module. </p></li>
+						</ul>
+					</li>
+					<li><p> Click <strong> Save</strong> button when finish.</p></li>
+				</ul>
+				<br/>
+				<h4>3. Create sub module of OC Blog </h4>
+				<ul>
+					<li><p> Login your opencart admin -> <strong>Extensions -> Extensions -> Choose the extension type -> Modules -> OC Blog </strong></p></li> 
+					<li> 
+						<p> We got :</p>
+						<p> <img src="assets/img/admin_blog.jpg" alt=" admin blog" /> </p>
+						<p> Configure some parameters as below: </p>
+						<ul>
+							<li><p><strong> Module Name </strong> - Input name of sub Blog. </p></li>
+							<li><p><strong> Article List </strong> - Choose list of posts you want to show in this sub module. </p></li>
+							<li> <p><strong> Status </strong> - Set<strong> Enabled </strong> to use this sub module. </p></li>
+							<li> <p><strong> Article Image Width, Article Image Height</strong> - Item size will be displayed. </p></li>
+						</ul>
+					</li>
+					<li> Click <strong> Save</strong>  button to save your changes.</li>
+					<li><p> Back to <strong> Modules</strong>  list :</p>
+						<p> <img src="assets/img/ex_name_blog.jpg" alt=" name blog " /></p>
+					</li> 
+				</ul>
+				<br/>
+				<p><i>=> To customize this module, please modify these files :</i></p>
+				<p><i>- catalog\view\theme\your_theme\template\blog\article.tpl</i></p>
+				<p><i>- catalog\view\theme\your_theme\template\blog\blog.tpl</i></p>
+				<p><i>- catalog\view\theme\your_theme\template\blog\blog_home.tpl</i></p>
+			</div><!--BLOG-->
+			
+			<!--TESTIMONIAL-->
+			<div class="chapter" id="config_testimonial">
+                <div class="divider"></div>
+                <h2>OC Testimonials</h2>
+				<p><i>***This module shows and manage comments, feedback, testimonials from customers in slider.</i></p>
+				<h3> 1. How to config this module</h3>
+				<ul>
+					<li><p>Login your opencart admin</p></li> 
+					<li><p>Go to <strong> Extensions -> Extensions -> Choose the extension type -> Modules </strong> -> <strong> OC Testimonials - Testimonials Home1 </strong> -> <strong> Edit </strong><img src="assets/img/edit_button.jpg" alt="add new" /></p></li>
+					<li> 
+						<p> We got :</p>
+						<p> <img src="assets/img/admin_testimonial.jpg" alt="admin testimonial" /> </p>
+						<p> Configure some parameters as below: </p>
+						<ul>
+							<li><p><strong> Module Name </strong> - Input name of sub OC Testimonials. </p></li>
+							<li><p><strong> Status</strong> - Set <strong> Enabled </strong> to use this sub module. </p></li>
+							<li><p><strong> Items </strong> - Set number of testimonial will be displayed per row. </p></li>
+							<li> <p><strong> Rows </strong> - Number of rows will be displayed. </p></li>
+							<li><p><strong> Limit </strong> - Number of testimonial will be allowed in slider. </p></li>
+							<li> <p><strong> Testimonial Image Width, Testimonial Image Height</strong> - Image size of each testimonial will be displayed. </p></li>
+						</ul>
+					</li>
+				</ul>
+				<br/>
+				<h3> 2. How to edit testimonials in this theme</h3>
+				<ul>
+					<li><p>Login your opencart admin</p></li> 
+					<li><p>Go to <strong> Catalog -> Testimonials</strong></p></li>
+					<li> 
+						<p> We got :</p>
+						<p> <img src="assets/img/list_testimonial.jpg" alt="list testimonial" /> -> Choose  testimonial you want to edit -> Edit according to you. </p>
+					</li>
+				</ul>
+				<br/>
+				<h3> 3. How to add new testimonial</h3>
+				<ul>
+					<li><p>Login your opencart admin</p></li> 
+					<li><p>Go to <strong> Catalog -> Testimonials -> Add New</strong></p></li>
+					<li> 
+						<p> We got :</p>
+						<p> <img src="assets/img/list_testimonial1.jpg" alt="list testimonial1" /> </p>
+						<p> Configure some parameters as below: </p>
+						<ul>
+							<li><p><strong> Customer Name</strong> - Input name of the testimonial. </p></li>
+							<li><p><strong> Content</strong> - Enter content of the testimonial.</p></li>
+							<li><p><strong> Status</strong> - Set <strong> Enabled </strong> to use this testimonial.</p></li>
+							<li><p><strong> Image File </strong> - Click at this field to upload avatar of the testimonial. </p></li>
+							<li><p><strong> Sort Order </strong> - Order of the testimonial</p></li>
+						</ul>
+					</li>
+					<li><p>Click <strong> Save</strong> to save the testimonial.</p></li>
+				</ul>
+				<p><i>=> To customize this module, please modify this file : catalog\view\theme\your_theme\template\extension\module\octestimonial.tpl</i></p>
+			</div><!--TESTIMONIAL-->
+			
+			<!--OC NEWSLETTER-->
+            <div class="chapter" id="config_newsletter">
+                <div class="divider"></div>
+                <h2>Config Oc Newsletter</h2>
+				<p> <img src="assets/img/ex_newsletter.jpg" alt="newsletter" /> </p>
+				<ul>
+					<li><p>Login your opencart admin</p></li> 
+					<li> <p>Go to <strong> Extensions -> Modules </strong> -> <strong> Oc Newsletter - Newsletter </strong>(Newsletter block), <strong> Oc Newsletter - Newsletter Popup</strong>(Newsletter popup) -> <strong> Edit </strong><img src="assets/img/edit_button.jpg" alt="add new" /></p></li>
+					<li> 
+						<p> We got :</p>
+						<p> <img src="assets/img/admin_newsletter.jpg" alt="admin newsletter" /> </p>
+						<p> Config some parameters as below : </p>
+						<ul>
+							<li> <p><strong> Name Module </strong> - <strong> Sub OC Newsletter</strong></p></li>
+							<li> <p><strong> Use Popup </strong> - Set <strong> Enabled </strong> to set sub module as Newsletter popup, set <strong> Disabled </strong> if you don't want. </p></li>
+							<li> <p><strong> Status </strong> - Set <strong> Enabled</strong> to use this sub module</p></li>
+						</ul>
+					</li>
+				</ul>
+				<p><i>=> To customize this module, please modify this file :</i></p>
+				<p><i>- Newsletter block: catalog\view\theme\your_theme\template\extension\module\newslettersubscribe.tpl</i></p>
+				<p><i>- Newsletter popup: catalog\view\theme\your_theme\template\extension\module\newsletterpopup.tpl</i></p>
+			</div><!--OC NEWSLETTER -->
+			
+			<!--PRODUCT QUICKVIEW-->
+            <div class="chapter" id="config_quickview">
+                <div class="divider"></div>
+				<h2>OC Product Quick View</h2>
+				<p> <img src="assets/img/ex_quickview.jpg" alt="quickview" /> </p>
+				<p><i>*** This module show image and thumbnail image of the product with information about that product via popup.</i></p>
+				<h3> How to config this module </h3>
+				<ul>
+					<li><p> Login your opencart admin</p></li> 
+					<li><p>Go to <strong> Extensions -> Extensions -> Choose the extension type -> Modules </strong> -> <strong>Product Quick View</strong> ->  Config this module according to you </p>
+					<p> <img src="assets/img/admin_quickview.jpg" alt="admin quickview" /> </p>
+					<h5> Config some parameters as below : </h5>
+						<ul>
+							<li><p><strong> Enable Quick View </strong> - Disable/Enable this module</p></li>
+							<li><p><strong> Ajax Loader Image </strong> - Upload image when ajax is loading</p></li>
+							<li><p><strong> QuickView Container </strong> - The class name/id of container of modules, category page you want to use OC Product Quick View</p></li>
+							<li><p><strong> Parent Element </strong> - The class name or id of the product item  </p></li>
+							<li><p><strong>Children Element</strong> - The class name or id of element which you want it to contain the Quick View button</p></li>
+						</ul>
+					</li>
+				</ul>
+				<p><i>=> To customize this module, please modify these files :</i></p>
+				<p><i>- catalog\view\theme\your_theme\template\extension\module\ocquickview\product.tpl</i></p>
+				<p><i>- catalog\view\theme\your_theme\template\extension\module\ocquickview\qvcontainer.tpl</i></p>
+			</div><!--PRODUCT QUICKVIEW-->
+			
+			<!--LAYERED NAVIGATION-->
+            <div class="chapter" id="config_layered">
+                <div class="divider"></div>
+                <h2>Config OC Layered Navigation Ajax</h2>
+				<p> <img src="assets/img/ex_layered.jpg" alt="layered navigation" /> </p>
+				<ul>
+					<li><p> Login your opencart admin</p></li> 
+					<li><p>Go to <strong> Extensions -> Extensions -> Choose the extension type -> Modules </strong> -> Find name <strong>OC Layered Navigation Ajax</strong>  -> Choose <strong>Edit</strong> button <img src="assets/img/edit_button.jpg" alt="edit" /> -> Config this module according to you </p></li>
+				</ul>
+				<h3 id="filters"> How to set up and manage products filters in category page :</h3>
+				<ol>
+					<li>
+						<p>Log into the admin panel of your site. From the top menu select <strong>Catalog</strong> -> <strong>Filters</strong>:</p>
+						<p> <img src="assets/img/admin_filter1.jpg" alt="filter" /> </p>
+					</li>
+					<li>
+						<p>Next, click the <strong>Add New</strong> button on the right to add the filters. Product Filters are added in the same way as product options. Save the changes by clicking <strong>Save</strong> at the top right: </p>
+						<p> <img src="assets/img/admin_filter2.jpg" alt="filter" /> </p>
+					</li>
+					<li>
+						<p>Now go to <strong>Extensions</strong> –> <strong>Modules</strong> and search for <strong>OC Layered Navigation Ajax</strong> module. Click <strong>Install</strong> button to install it if it is not installed yet:</p>
+						<p> <img src="assets/img/admin_filter3.jpg" alt="filter" /> </p>
+					</li>
+					<li>
+						<p>Click <strong>Edit</strong> and open it, enable the module and click <strong>Save</strong> button to save the changes</p>
+					</li>
+					<li>
+						<p>Go to the top menu <strong>Catalog</strong> -> <strong>Products</strong>. Click <strong>Edit</strong> on one of the products, on the manage product screen choose the <strong>Links</strong> tab and look for the <strong>Filters</strong> section</p>
+						<p> <img src="assets/img/admin_filter4.jpg" alt="filter" /> </p>
+					</li>
+					<li>
+						<p>The <strong>Filter</strong> box is a standard auto complete box. Simply type in a part of the filter name. Add as many filters you wish the product to belong to. Save your changes when finished</p>
+					</li>
+					<li>
+						<p>Now link the filter to the category page. Go to <strong>System</strong> -> <strong>Design</strong> -> <strong>Layouts</strong> -> <strong>Category</strong>, click the <strong>Add Module</strong> button. If you want to display the filters in the left column of the category listing page, you should mirror the settings as follows: Module: OC Layered Navigation Ajax, Position: Column Left. Click <strong>Save</strong></p>
+						<p> <img src="assets/img/admin_filter5.jpg" alt="filter" /> </p>
+					</li>
+					<li>
+						<p>Go to <strong>Catalog</strong> -> <strong>Categories</strong> -> <strong>Categories</strong>. Click <strong>Edit</strong> on the categories which products have filters assigned to. Choose the <strong>Data</strong> tab and look for the <strong>Filters</strong> section. Type in a part of the filter name to add the same filters added to your categories. Save your changes when finished:</p>
+						<p> <img src="assets/img/admin_filter6.jpg" alt="filter" /> </p>
+					</li>
+					<li>
+						<p>When you are done, go to the category page and you will see the new filter box</p>
+						<p> <img src="assets/img/ex_layered.jpg" alt="filter" /> </p>
+					</li>
+				</ol>
+				<p><i>=> To customize this module, please modify these files :</i></p>
+				<p><i>- catalog\view\theme\your_theme\template\extension\module\oclayerednavigation\occategory.tpl</i></p>
+				<p><i>- catalog\view\theme\your_theme\template\extension\module\oclayerednavigation\occategoryfilter.tpl</i></p>
+				<p><i>- catalog\view\theme\your_theme\template\extension\module\oclayerednavigation\oclayerednavigation.tpl</i></p>
+				<p><i>- catalog\view\theme\your_theme\template\extension\module\oclayerednavigation\oclayerednavigationfilter.tpl</i></p>
+			</div><!--LAYERED NAVIGATION-->
+			
+			<!--ROTATOR IMAGE-->
+            <div class="chapter" id="rotator_image">
+                <div class="divider"></div>
+                <h2>OC Product Rotator Image </h2>
+				<h3> Example :</h3>
+				<p> <img src="assets/img/ex_rotator1.jpg"  alt="rotator1" /></p>
+				<p> When hover :</p>
+				<p> <img src="assets/img/ex_rotator2.jpg"  alt="rotator2" /></p>
+				<h3> 1. How to config this module :</h3>
+				<ul>
+					<li><p> Login your opencart admin</p></li> 
+					<li><p>Go to <strong> Extensions -> Extensions -> Choose the extension type -> Modules </strong> -> <strong>OC Product Rotator Image</strong> ->  Set <strong>Enabled</strong> to use this module.</p></li>
+				</ul>
+				<br/>
+				<h3> 2. How to upload rotator image :</h3>
+				<ul>
+					<li><p> Login your opencart admin</p></li> 
+					<li><p>Go to <strong> Catalog -> Products </strong> -> At <strong> Product Name </strong>, choose <strong> Edit </strong> button <img src="assets/img/edit_button.jpg"  alt="edit" /> at the product you want to upload rotator image -> Click  tab <strong> Image </strong> -> <strong> Add Image</strong> </p></li>
+					<li><p> <img src="assets/img/set_rotator.jpg"  alt="set rotator" /></p> </li>
+					<li> Click <strong> Save</strong>  button to save your changes.</li>
+				</ul>
+			</div><!--ROTATOR IMAGE-->
+			
+			<!--TRANSLATE-->
+            <div class="chapter" id="translate">
+                <div class="divider"></div>
+                <h2>Translation</h2>
+				<h3> 1. How to translate </h3>
+				<ol>	
+					<li> <p> Access url : <strong> catalog\language</strong>  </p></li>
+					<li> <p> Make a copy of the folder  <strong> en-gb </strong>  and rename it to language you want to translate. Example : <strong>fr-gb</strong> </p></li>
+					<li> <p> In folder you've made (<strong>fr-gb</strong>), rename <strong>en-gb.php </strong> to <strong>fr-gb.php </strong>  </p></li>
+					<li> <p> You need to translate all files in subfolders (account, checkout,...total) and file <strong>fr-gb.php </strong></p> </li>
+				</ol>
+				<i> Do the same with other languages.</i>
+				<h4> 1. Example : Translate title <strong> New Arrivals</strong> from English into French</h4>
+				<ol>	
+					<li> <p> Access url : <strong> catalog\language</strong>  </p></li>
+					<li> <p> Make a copy of the folder  <strong> en-gb</strong>  and rename it to language you want to translate.</p></li>
+					<li> <p> In folder you've made (<strong>fr-gb</strong>), rename <strong> en-gb.php </strong> to <strong>fr-gb.php </strong>  </p></li>
+					<li> <p> Go to <strong>catalog\language\fr-gb\extension\module\ocnewproduct.php</strong>-> translate -> Save this file to change</p>
+						<p> Modules and responsive .php files : </p>
+						<ul>
+							<li><p>OC Vertical Megamenu - <i>ocvermegamenu.php</i></p></li>
+							<li><p>OC Slide show - <i>ocslideshow.php (translate text "Read More")</i></p></li>
+							<li><p>OC Category Tabs Slider - <i>octabcategoryslider.php</i></p></li>
+							<li><p>OC Featured Category - <i>ocfeaturedcategory.php</i></p></li>
+							<li><p>OC Featured Categories Tab - <i>ocfeaturedcategorytab.php</i></p></li>
+							<li><p>OC New Products Slider - <i>ocnewproductslider.php</i></p></li>
+							<li><p>OC Featured Products Slider - <i>ocfeatureslider.php</i></p></li>
+							<li><p>OC Special Products Slider - <i>ocspecialproductslider.php</i></p></li>
+							<li><p>OC Random Products Slider - <i>ocrandomslider.php</i></p></li>
+							<li><p>OC Bestseller Products Slider - <i>ocbestproductslider.php</i></p></li>
+							<li><p>OC Mostviewed Products Slider - <i>ocmostproduct.php</i></p></li>
+							<li><p>OC Testimonials - <i>octestimonial.php</i></p></li>
+							<li><p>Oc Newsletter - <i>newslettersubscribe.php</i></p></li>
+							<li><p>OC Layered Navigation Ajax - <i>oclayerednavigation.php</i></p></li>
+							<li><p>Information - <i>information.php</i></p></li>
+							<li><p>Filter - <i>filter.php</i></p></li>
+							<li><p>Account - <i>account.php</i></p></li>
+							<li><p>Affiliate - <i>affiliate.php</i></p></li>
+						</ul>
+					</li>
+				</ol>
+				<br/>
+				<h4> 2. Translate title other modules</h4>
+				<ul>
+					<li> <p> Login your opencart admin </p></li>
+					<li> <p> Go to <strong>Extensions -> Extensions -> Choose the extension type -> Modules </strong> -> Sub module </p></li>
+					<li> <p> At  <strong>Title </strong> : At your language, enter title of module  </p></li>
+					<li> <p> Click <strong>Save</strong> to save your change</p></li>
+				</ul>
+				<h4>Example: Translate title "New Arrivals":</h4>
+				<ul>
+					<li> <p> Login your opencart admin </p></li>
+					<li> <p> Go to <strong> Extensions -> Extensions -> Choose the extension type -> Modules </strong> -> sub module of <strong>OC New Products Slider</strong></p></li>
+					<li> <p> At  <strong>Title </strong> : At your language, enter title of module  </p></li>
+					<li> <p> Click <strong>Save</strong> to save your change</p></li>
+				</ul>
+				<br/>
+				<h4> 2. Translate in Blog </h4>
+				<h4>2.1.Translate text </h4>
+				<ul>
+					<li> <p> Access url : <strong> catalog\language</strong>  </p></li>
+					<li> <p> Make a copy of the folder  <strong> en-gb</strong>  and rename it to language you want to translate. Example : <strong>fr-gb</strong> </p></li>
+					<li> <p> In folder you've made (Example : <strong>fr-gb</strong>), rename <strong>en-gb.php </strong> to <strong>fr-gb.php </strong>  </p></li>
+					<li> <p><strong>catalog\language\fr-gb\blog\article.php, blog.php</strong> -> translate -> Save this file to change</p></li>
+				</ul>
+				<h4>2.2.Translate title </h4>
+				<ul>
+					<li> <p> Login your opencart admin </p></li>
+					<li> <p> Go to <strong> Extensions -> Extensions -> Choose the extension type -> Modules -</strong> -> sub module of <strong>OC Blog</strong></p></li>
+					<li> <p> At  <strong>Title </strong> : At language, enter title of module  </p></li>
+					<li> <p> Click <strong>Save</strong> to save your change</p></li>
+				</ul>
+			</div><!--TRANSLATE-->
+			
+			<!--SUPPORT-->
+            <div class="chapter" id="support">
+                <div class="divider"></div>
+                <h2>Theme Support</h2>
+				<p>Support Working time: Monday - Friday</p>
+				<p>Estimated ticket and answers review time: 1-3 business days.</p>
+				<p>We have hundreds of questions and provide answers asap, but this can take up to 3 days after your submitted request. Please be patient and wait for answer.</p>
+				<p> Contact us whenever you need : <a href="http://plazathemes.com/tickets/">PlazaThemes Support</a></p>	
+			</div><!--SUPPORT-->
+			
+        </div>
+    </div>
+</div>
+<span id="back-top"><a href="javascript(0)"><span class="icon fa fa-arrow-up"></span></a></span>
+<script src="assets/js/jquery.min.js"></script>
+<script type="text/javascript" src="assets/js/bootstrap.js"></script>
+<script type="text/javascript" src="assets/js/jasny-bootstrap.min.js"></script>
+<script type="text/javascript">
+ $(document).ready(function(){
+  $('.nav.navmenu-nav a').click(function(){
+   $('.nav.navmenu-nav a').removeClass('active');
+   $(this).addClass('active');
+  });
+ });
+</script>
+</body></html>

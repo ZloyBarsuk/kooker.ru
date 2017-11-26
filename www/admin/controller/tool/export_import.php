@@ -176,10 +176,12 @@ class ControllerToolExportImport extends Controller {
 		$data['entry_settings_use_import_cache'] = $this->language->get( 'entry_settings_use_import_cache' );
 
 		$data['tab_export'] = $this->language->get( 'tab_export' );
+        $data['tab_export_berghoff'] = $this->language->get( 'tab_export_berghoff' );
 		$data['tab_import'] = $this->language->get( 'tab_import' );
 		$data['tab_settings'] = $this->language->get( 'tab_settings' );
 
 		$data['button_export'] = $this->language->get( 'button_export' );
+        $data['button_export_berghoff'] = $this->language->get( 'button_export_berghoff' );
 		$data['button_import'] = $this->language->get( 'button_import' );
 		$data['button_settings'] = $this->language->get( 'button_settings' );
 		$data['button_export_id'] = $this->language->get( 'button_export_id' );
@@ -240,7 +242,8 @@ class ControllerToolExportImport extends Controller {
 		$data['button_back'] = $this->language->get( 'button_back' );
 		$data['import'] = $this->url->link('tool/export_import/upload', 'token=' . $this->session->data['token'], $this->ssl);
 		$data['export'] = $this->url->link('tool/export_import/download', 'token=' . $this->session->data['token'], $this->ssl);
-		$data['settings'] = $this->url->link('tool/export_import/settings', 'token=' . $this->session->data['token'], $this->ssl);
+        $data['export_berghoff'] = $this->url->link('tool/export_import/download_berghoff', 'token=' . $this->session->data['token'], $this->ssl);
+        $data['settings'] = $this->url->link('tool/export_import/settings', 'token=' . $this->session->data['token'], $this->ssl);
 		$data['post_max_size'] = $this->return_bytes( ini_get('post_max_size') );
 		$data['upload_max_filesize'] = $this->return_bytes( ini_get('upload_max_filesize') );
 
@@ -561,5 +564,73 @@ class ControllerToolExportImport extends Controller {
 		}
 		$this->response->setOutput(json_encode($json));
 	}
+
+
+
+	// Berghoff Downloads
+
+    public function download_berghoff() {
+        $this->load->language( 'tool/export_import' );
+        $this->document->setTitle($this->language->get('heading_title'));
+        $this->load->model( 'tool/export_import' );
+        if (($this->request->server['REQUEST_METHOD'] == 'POST') && $this->validateDownloadForm()) {
+            $export_type = $this->request->post['export_type'];
+            switch ($export_type) {
+                case 'c':
+                case 'p':
+                case 'u':
+                    $min = null;
+                    if (isset( $this->request->post['min'] ) && ($this->request->post['min']!='')) {
+                        $min = $this->request->post['min'];
+                    }
+                    $max = null;
+                    if (isset( $this->request->post['max'] ) && ($this->request->post['max']!='')) {
+                        $max = $this->request->post['max'];
+                    }
+                    if (($min==null) || ($max==null)) {
+                        $this->model_tool_export_import->downloadBergHOFF($export_type, null, null, null, null);
+                    } else if ($this->request->post['range_type'] == 'id') {
+                        $this->model_tool_export_import->downloadBergHOFF($export_type, null, null, $min, $max);
+                    } else {
+                        $this->model_tool_export_import->downloadBergHOFF($export_type, $min*($max-1-1), $min, null, null);
+                    }
+                    break;
+                case 'o':
+                    $this->model_tool_export_import->downloadBergHOFF('o', null, null, null, null);
+                    break;
+                case 'a':
+                    $this->model_tool_export_import->downloadBergHOFF('a', null, null, null, null);
+                    break;
+                case 'f':
+                    if ($this->model_tool_export_import->existFilter()) {
+                        $this->model_tool_export_import->downloadBergHOFF('f', null, null, null, null);
+                        break;
+                    }
+                    break;
+                default:
+                    break;
+            }
+            $this->response->redirect( $this->url->link( 'tool/export_import', 'token='.$this->request->get['token'], $this->ssl) );
+        }
+
+        $this->getForm();
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }
 ?>

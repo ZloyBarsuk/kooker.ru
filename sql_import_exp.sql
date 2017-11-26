@@ -5436,7 +5436,7 @@ DELETE FROM `oc_currency`;
 /*!40000 ALTER TABLE `oc_currency` DISABLE KEYS */;
 INSERT INTO `oc_currency` (`currency_id`, `title`, `code`, `symbol_left`, `symbol_right`, `decimal_place`, `value`, `status`, `date_modified`) VALUES
 	(1, 'Pound Sterling', 'GBP', '£', '', '2', 0.77440000, 1, '2017-05-11 10:49:53'),
-	(2, 'US Dollar', 'USD', '$', '', '2', 1.00000000, 1, '2017-11-25 20:23:00'),
+	(2, 'US Dollar', 'USD', '$', '', '2', 1.00000000, 1, '2017-11-26 11:19:06'),
 	(3, 'Euro', 'EUR', '', '€', '2', 0.91869998, 1, '2017-05-11 10:49:53');
 /*!40000 ALTER TABLE `oc_currency` ENABLE KEYS */;
 
@@ -7424,7 +7424,7 @@ INSERT INTO `oc_product` (`product_id`, `model`, `sku`, `upc`, `ean`, `jan`, `is
 	(36, '8', '', '', '', '', '', '', '', 999999, 7, 'catalog/products1/16.jpg', 9, 0, 230.0000, 100, 0, '2016-12-12', 5.00000000, 1, 0.00000000, 0.00000000, 0.00000000, 2, 1, 1, 0, 1, 1, '2009-02-03 18:09:19', '2017-05-11 14:32:00'),
 	(40, '6', '', '', '', '', '', '', '', 999999, 7, 'catalog/products1/14.jpg', 8, 1, 380.0000, 0, 0, '2016-12-12', 10.00000000, 1, 0.00000000, 0.00000000, 0.00000000, 1, 1, 1, 0, 1, 0, '2009-02-03 21:07:12', '2016-12-19 15:13:02'),
 	(41, '5', '', '', '', '', '', '', '', 999998, 7, 'catalog/products1/13.jpg', 8, 1, 180.0000, 0, 0, '2016-12-12', 5.00000000, 1, 0.00000000, 0.00000000, 0.00000000, 1, 1, 1, 0, 1, 0, '2009-02-03 21:07:26', '2017-05-11 14:30:31'),
-	(42, '1', '', '', '', '', '', '', '', 999999, 7, 'catalog/products1/1.jpg', 8, 1, 400.0000, 400, 0, '2016-12-12', 12.50000000, 1, 1.00000000, 2.00000000, 3.00000000, 1, 1, 1, 0, 1, 2, '2009-02-03 21:07:37', '2017-05-11 14:28:03'),
+	(42, '1', '', '', '', '', '', '', '', 999999, 7, 'catalog/products1/1.jpg', 8, 1, 400.0000, 400, 0, '2016-12-12', 12.50000000, 1, 1.00000000, 2.00000000, 3.00000000, 1, 1, 1, 0, 1, 5, '2009-02-03 21:07:37', '2017-11-25 23:42:06'),
 	(43, '11', '', '', '', '', '', '', '', 999998, 7, 'catalog/products1/4.jpg', 8, 0, 430.0000, 0, 0, '2016-12-12', 0.00000000, 1, 0.00000000, 0.00000000, 0.00000000, 2, 1, 1, 0, 1, 0, '2009-02-03 21:07:49', '2017-05-11 14:37:38'),
 	(44, '12', '', '', '', '', '', '', '', 999999, 7, 'catalog/products1/5.jpg', 8, 1, 380.0000, 0, 0, '2016-12-12', 0.00000000, 1, 0.00000000, 0.00000000, 0.00000000, 2, 1, 1, 0, 1, 0, '2009-02-03 21:08:00', '2017-05-11 14:35:36'),
 	(45, '13', '', '', '', '', '', '', '', 99998, 7, 'catalog/products1/8.jpg', 9, 1, 360.0000, 0, 0, '2016-12-12', 0.00000000, 1, 0.00000000, 0.00000000, 0.00000000, 2, 1, 1, 0, 1, 0, '2009-02-03 21:08:17', '2017-05-11 14:36:18'),
@@ -7484,17 +7484,15 @@ CREATE TABLE IF NOT EXISTS `oc_product_attribute` (
   PRIMARY KEY (`product_id`,`attribute_id`,`language_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
--- Дамп данных таблицы kooker.oc_product_attribute: 60 rows
+-- Дамп данных таблицы kooker.oc_product_attribute: 58 rows
 DELETE FROM `oc_product_attribute`;
 /*!40000 ALTER TABLE `oc_product_attribute` DISABLE KEYS */;
 INSERT INTO `oc_product_attribute` (`product_id`, `attribute_id`, `language_id`, `text`) VALUES
 	(43, 4, 1, '8gb'),
-	(42, 3, 1, '100mhz'),
 	(47, 4, 1, '16GB'),
 	(43, 2, 2, '1'),
 	(47, 2, 1, '4'),
 	(43, 2, 1, '1'),
-	(42, 3, 2, '100mhz'),
 	(47, 2, 2, '4'),
 	(49, 3, 1, '100mhz'),
 	(51, 4, 2, '16GB'),
@@ -7529,7 +7527,7 @@ INSERT INTO `oc_product_attribute` (`product_id`, `attribute_id`, `language_id`,
 	(47, 4, 2, '16GB'),
 	(43, 4, 2, '8gb'),
 	(43, 4, 3, '8gb'),
-	(42, 3, 3, '100mhz'),
+	(42, 3, 1, '100mhz'),
 	(47, 4, 3, '16GB'),
 	(47, 2, 3, '4'),
 	(43, 2, 3, '1'),
@@ -7565,7 +7563,7 @@ CREATE TABLE IF NOT EXISTS `oc_product_description` (
   KEY `name` (`name`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
--- Дамп данных таблицы kooker.oc_product_description: 168 rows
+-- Дамп данных таблицы kooker.oc_product_description: 166 rows
 DELETE FROM `oc_product_description`;
 /*!40000 ALTER TABLE `oc_product_description` DISABLE KEYS */;
 INSERT INTO `oc_product_description` (`product_id`, `language_id`, `name`, `description`, `tag`, `meta_title`, `meta_description`, `meta_keyword`) VALUES
@@ -7590,8 +7588,7 @@ INSERT INTO `oc_product_description` (`product_id`, `language_id`, `name`, `desc
 	(48, 1, 'Letraset Sheets', 'Nunc facilisis sagittis ullamcorper. Proin lectus ipsum, gravida et mattis vulputate, tristique ut lectus. Sed et lorem nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aenean eleifend laoreet congue. Vivamus adipiscing nisl ut dolor dignissim semper. Nulla luctus malesuada tincidunt. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Integer enim purus, posuere at ultricies eu, placerat a felis. Suspendisse aliquet urna pretium eros convallis interdum. Quisque in arcu id dui vulputate mollis eget non arcu. Aenean et nulla purus. Mauris vel tellus non nunc mattis lobortis.Nunc facilisis sagittis ullamcorper. Proin lectus ipsum, gravida et mattis vulputate, tristique ut lectus. Sed et lorem nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aenean eleifend laoreet congue. Vivamus adipiscing nisl ut dolor dignissim semper. Nulla luctus malesuada tincidunt. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Integer enim purus, posuere at ultricies eu, placerat a felis. Suspendisse aliquet urna pretium eros convallis interdum. Quisque in arcu id dui vulputate mollis eget non arcu. Aenean et nulla purus. Mauris vel tellus non nunc mattis lobortis', '', 'Letraset Sheets', '', ''),
 	(28, 1, 'Donec Non Est', 'Nunc facilisis sagittis ullamcorper. Proin lectus ipsum, gravida et mattis vulputate, tristique ut lectus. Sed et lorem nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aenean eleifend laoreet congue. Vivamus adipiscing nisl ut dolor dignissim semper. Nulla luctus malesuada tincidunt. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Integer enim purus, posuere at ultricies eu, placerat a felis. Suspendisse aliquet urna pretium eros convallis interdum. Quisque in arcu id dui vulputate mollis eget non arcu. Aenean et nulla purus. Mauris vel tellus non nunc mattis lobortis.Nunc facilisis sagittis ullamcorper. Proin lectus ipsum, gravida et mattis vulputate, tristique ut lectus. Sed et lorem nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aenean eleifend laoreet congue. Vivamus adipiscing nisl ut dolor dignissim semper. Nulla luctus malesuada tincidunt. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Integer enim purus, posuere at ultricies eu, placerat a felis. Suspendisse aliquet urna pretium eros convallis interdum. Quisque in arcu id dui vulputate mollis eget non arcu. Aenean et nulla purus. Mauris vel tellus non nunc mattis lobortis', '', 'Donec Non Est', '', ''),
 	(34, 1, 'Lorem Ipsum Passages', 'Nunc facilisis sagittis ullamcorper. Proin lectus ipsum, gravida et mattis vulputate, tristique ut lectus. Sed et lorem nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aenean eleifend laoreet congue. Vivamus adipiscing nisl ut dolor dignissim semper. Nulla luctus malesuada tincidunt. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Integer enim purus, posuere at ultricies eu, placerat a felis. Suspendisse aliquet urna pretium eros convallis interdum. Quisque in arcu id dui vulputate mollis eget non arcu. Aenean et nulla purus. Mauris vel tellus non nunc mattis lobortis.Nunc facilisis sagittis ullamcorper. Proin lectus ipsum, gravida et mattis vulputate, tristique ut lectus. Sed et lorem nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aenean eleifend laoreet congue. Vivamus adipiscing nisl ut dolor dignissim semper. Nulla luctus malesuada tincidunt. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Integer enim purus, posuere at ultricies eu, placerat a felis. Suspendisse aliquet urna pretium eros convallis interdum. Quisque in arcu id dui vulputate mollis eget non arcu. Aenean et nulla purus. Mauris vel tellus non nunc mattis lobortis', '', 'Lorem Ipsum Passages', '', ''),
-	(42, 1, 'Accumsan Elit', 'Nunc facilisis sagittis ullamcorper. Proin lectus ipsum, gravida et mattis vulputate, tristique ut lectus. Sed et lorem nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aenean eleifend laoreet congue. Vivamus adipiscing nisl ut dolor dignissim semper. Nulla luctus malesuada tincidunt. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Integer enim purus, posuere at ultricies eu, placerat a felis. Suspendisse aliquet urna pretium eros convallis interdum. Quisque in arcu id dui vulputate mollis eget non arcu. Aenean et nulla purus. Mauris vel tellus non nunc mattis lobortis.Nunc facilisis sagittis ullamcorper. Proin lectus ipsum, gravida et mattis vulputate, tristique ut lectus. Sed et lorem nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aenean eleifend laoreet congue. Vivamus adipiscing nisl ut dolor dignissim semper. Nulla luctus malesuada tincidunt. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Integer enim purus, posuere at ultricies eu, placerat a felis. Suspendisse aliquet urna pretium eros convallis interdum. Quisque in arcu id dui vulputate mollis eget non arcu. Aenean et nulla purus. Mauris vel tellus non nunc mattis lobortis', '', 'Accumsan Elit', '', ''),
-	(42, 2, 'Accumsan Elit', 'Nunc facilisis sagittis ullamcorper. Proin lectus ipsum, gravida et mattis vulputate, tristique ut lectus. Sed et lorem nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aenean eleifend laoreet congue. Vivamus adipiscing nisl ut dolor dignissim semper. Nulla luctus malesuada tincidunt. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Integer enim purus, posuere at ultricies eu, placerat a felis. Suspendisse aliquet urna pretium eros convallis interdum. Quisque in arcu id dui vulputate mollis eget non arcu. Aenean et nulla purus. Mauris vel tellus non nunc mattis lobortis.Nunc facilisis sagittis ullamcorper. Proin lectus ipsum, gravida et mattis vulputate, tristique ut lectus. Sed et lorem nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aenean eleifend laoreet congue. Vivamus adipiscing nisl ut dolor dignissim semper. Nulla luctus malesuada tincidunt. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Integer enim purus, posuere at ultricies eu, placerat a felis. Suspendisse aliquet urna pretium eros convallis interdum. Quisque in arcu id dui vulputate mollis eget non arcu. Aenean et nulla purus. Mauris vel tellus non nunc mattis lobortis', '', 'Accumsan Elit', '', ''),
+	(42, 1, 'Accumsan Elit', 'Полный набор для приготовления пасты любой длины и формы. Кастрюля из нержавеющей стали 18/10 быстро нагревается, экономя электроэнергию. Перфорированная вставка облегчает слив, становясь дуршлагом, - ее нужно просто вынуть из кастрюли. Разумеется, вы можете использовать кастрюлю и саму по себе для приготовления супов. Используя вставку, вы превращаете ее в пароварку. Кастрюля подходит для всех типов плит, включая индукционные. Щипцы позволяют комфортно сервировать пасту в тарелки из высококачественного фарфора. В набор включены 4 вилки и 2 блюда для сервировки пасты, соусов, салатов и других сопровождающих блюд. Миска с теркой позволяет натирать сыры прямо за столом. Белый фарфор идеально сочетается со всеми видами и стилями сервировки. Все предметы подходят для мытья в посудомоечной машине, тарелки можно использовать в духовом шкафу и микроволновой печи.&lt;br\\&gt;&lt;br\\&gt;Состав набора:&lt;br&gt;6x тарелка для пасты # 27 cm1x миска для салата # 31 cm1x миска для соуса # 14 cm1x терка # 15 cm6x вилка для пасты # 21 cm1x щипцы для пасты # 27 cm1x кастрюля для пасты с крышкой и вставкой-пароваркой # 20 cm\r\n&lt;/br\\&gt;&lt;/br\\&gt;', '', 'Accumsan Elit', '', ''),
 	(30, 2, 'Aliquam Consequat', 'Nunc facilisis sagittis ullamcorper. Proin lectus ipsum, gravida et mattis vulputate, tristique ut lectus. Sed et lorem nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aenean eleifend laoreet congue. Vivamus adipiscing nisl ut dolor dignissim semper. Nulla luctus malesuada tincidunt. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Integer enim purus, posuere at ultricies eu, placerat a felis. Suspendisse aliquet urna pretium eros convallis interdum. Quisque in arcu id dui vulputate mollis eget non arcu. Aenean et nulla purus. Mauris vel tellus non nunc mattis lobortis.Nunc facilisis sagittis ullamcorper. Proin lectus ipsum, gravida et mattis vulputate, tristique ut lectus. Sed et lorem nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aenean eleifend laoreet congue. Vivamus adipiscing nisl ut dolor dignissim semper. Nulla luctus malesuada tincidunt. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Integer enim purus, posuere at ultricies eu, placerat a felis. Suspendisse aliquet urna pretium eros convallis interdum. Quisque in arcu id dui vulputate mollis eget non arcu. Aenean et nulla purus. Mauris vel tellus non nunc mattis lobortis', '', 'Aliquam Consequat', '', ''),
 	(47, 1, 'Donec Ac Tempus', 'Nunc facilisis sagittis ullamcorper. Proin lectus ipsum, gravida et mattis vulputate, tristique ut lectus. Sed et lorem nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aenean eleifend laoreet congue. Vivamus adipiscing nisl ut dolor dignissim semper. Nulla luctus malesuada tincidunt. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Integer enim purus, posuere at ultricies eu, placerat a felis. Suspendisse aliquet urna pretium eros convallis interdum. Quisque in arcu id dui vulputate mollis eget non arcu. Aenean et nulla purus. Mauris vel tellus non nunc mattis lobortis.Nunc facilisis sagittis ullamcorper. Proin lectus ipsum, gravida et mattis vulputate, tristique ut lectus. Sed et lorem nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aenean eleifend laoreet congue. Vivamus adipiscing nisl ut dolor dignissim semper. Nulla luctus malesuada tincidunt. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Integer enim purus, posuere at ultricies eu, placerat a felis. Suspendisse aliquet urna pretium eros convallis interdum. Quisque in arcu id dui vulputate mollis eget non arcu. Aenean et nulla purus. Mauris vel tellus non nunc mattis lobortis', '', 'Donec Ac Tempus', '', ''),
 	(47, 2, 'Donec Ac Tempus', 'Nunc facilisis sagittis ullamcorper. Proin lectus ipsum, gravida et mattis vulputate, tristique ut lectus. Sed et lorem nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aenean eleifend laoreet congue. Vivamus adipiscing nisl ut dolor dignissim semper. Nulla luctus malesuada tincidunt. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Integer enim purus, posuere at ultricies eu, placerat a felis. Suspendisse aliquet urna pretium eros convallis interdum. Quisque in arcu id dui vulputate mollis eget non arcu. Aenean et nulla purus. Mauris vel tellus non nunc mattis lobortis.Nunc facilisis sagittis ullamcorper. Proin lectus ipsum, gravida et mattis vulputate, tristique ut lectus. Sed et lorem nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aenean eleifend laoreet congue. Vivamus adipiscing nisl ut dolor dignissim semper. Nulla luctus malesuada tincidunt. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Integer enim purus, posuere at ultricies eu, placerat a felis. Suspendisse aliquet urna pretium eros convallis interdum. Quisque in arcu id dui vulputate mollis eget non arcu. Aenean et nulla purus. Mauris vel tellus non nunc mattis lobortis', '', 'Donec Ac Tempus', '', ''),
@@ -7692,7 +7689,6 @@ INSERT INTO `oc_product_description` (`product_id`, `language_id`, `name`, `desc
 	(48, 3, 'Letraset Sheets', 'Nunc facilisis sagittis ullamcorper. Proin lectus ipsum, gravida et mattis vulputate, tristique ut lectus. Sed et lorem nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aenean eleifend laoreet congue. Vivamus adipiscing nisl ut dolor dignissim semper. Nulla luctus malesuada tincidunt. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Integer enim purus, posuere at ultricies eu, placerat a felis. Suspendisse aliquet urna pretium eros convallis interdum. Quisque in arcu id dui vulputate mollis eget non arcu. Aenean et nulla purus. Mauris vel tellus non nunc mattis lobortis.Nunc facilisis sagittis ullamcorper. Proin lectus ipsum, gravida et mattis vulputate, tristique ut lectus. Sed et lorem nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aenean eleifend laoreet congue. Vivamus adipiscing nisl ut dolor dignissim semper. Nulla luctus malesuada tincidunt. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Integer enim purus, posuere at ultricies eu, placerat a felis. Suspendisse aliquet urna pretium eros convallis interdum. Quisque in arcu id dui vulputate mollis eget non arcu. Aenean et nulla purus. Mauris vel tellus non nunc mattis lobortis', '', 'Letraset Sheets', '', ''),
 	(28, 3, 'Donec Non Est', 'Nunc facilisis sagittis ullamcorper. Proin lectus ipsum, gravida et mattis vulputate, tristique ut lectus. Sed et lorem nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aenean eleifend laoreet congue. Vivamus adipiscing nisl ut dolor dignissim semper. Nulla luctus malesuada tincidunt. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Integer enim purus, posuere at ultricies eu, placerat a felis. Suspendisse aliquet urna pretium eros convallis interdum. Quisque in arcu id dui vulputate mollis eget non arcu. Aenean et nulla purus. Mauris vel tellus non nunc mattis lobortis.Nunc facilisis sagittis ullamcorper. Proin lectus ipsum, gravida et mattis vulputate, tristique ut lectus. Sed et lorem nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aenean eleifend laoreet congue. Vivamus adipiscing nisl ut dolor dignissim semper. Nulla luctus malesuada tincidunt. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Integer enim purus, posuere at ultricies eu, placerat a felis. Suspendisse aliquet urna pretium eros convallis interdum. Quisque in arcu id dui vulputate mollis eget non arcu. Aenean et nulla purus. Mauris vel tellus non nunc mattis lobortis', '', 'Donec Non Est', '', ''),
 	(34, 3, 'Lorem Ipsum Passages', 'Nunc facilisis sagittis ullamcorper. Proin lectus ipsum, gravida et mattis vulputate, tristique ut lectus. Sed et lorem nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aenean eleifend laoreet congue. Vivamus adipiscing nisl ut dolor dignissim semper. Nulla luctus malesuada tincidunt. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Integer enim purus, posuere at ultricies eu, placerat a felis. Suspendisse aliquet urna pretium eros convallis interdum. Quisque in arcu id dui vulputate mollis eget non arcu. Aenean et nulla purus. Mauris vel tellus non nunc mattis lobortis.Nunc facilisis sagittis ullamcorper. Proin lectus ipsum, gravida et mattis vulputate, tristique ut lectus. Sed et lorem nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aenean eleifend laoreet congue. Vivamus adipiscing nisl ut dolor dignissim semper. Nulla luctus malesuada tincidunt. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Integer enim purus, posuere at ultricies eu, placerat a felis. Suspendisse aliquet urna pretium eros convallis interdum. Quisque in arcu id dui vulputate mollis eget non arcu. Aenean et nulla purus. Mauris vel tellus non nunc mattis lobortis', '', 'Lorem Ipsum Passages', '', ''),
-	(42, 3, 'Accumsan Elit', 'Nunc facilisis sagittis ullamcorper. Proin lectus ipsum, gravida et mattis vulputate, tristique ut lectus. Sed et lorem nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aenean eleifend laoreet congue. Vivamus adipiscing nisl ut dolor dignissim semper. Nulla luctus malesuada tincidunt. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Integer enim purus, posuere at ultricies eu, placerat a felis. Suspendisse aliquet urna pretium eros convallis interdum. Quisque in arcu id dui vulputate mollis eget non arcu. Aenean et nulla purus. Mauris vel tellus non nunc mattis lobortis.Nunc facilisis sagittis ullamcorper. Proin lectus ipsum, gravida et mattis vulputate, tristique ut lectus. Sed et lorem nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aenean eleifend laoreet congue. Vivamus adipiscing nisl ut dolor dignissim semper. Nulla luctus malesuada tincidunt. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Integer enim purus, posuere at ultricies eu, placerat a felis. Suspendisse aliquet urna pretium eros convallis interdum. Quisque in arcu id dui vulputate mollis eget non arcu. Aenean et nulla purus. Mauris vel tellus non nunc mattis lobortis', '', 'Accumsan Elit', '', ''),
 	(47, 3, 'Donec Ac Tempus', 'Nunc facilisis sagittis ullamcorper. Proin lectus ipsum, gravida et mattis vulputate, tristique ut lectus. Sed et lorem nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aenean eleifend laoreet congue. Vivamus adipiscing nisl ut dolor dignissim semper. Nulla luctus malesuada tincidunt. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Integer enim purus, posuere at ultricies eu, placerat a felis. Suspendisse aliquet urna pretium eros convallis interdum. Quisque in arcu id dui vulputate mollis eget non arcu. Aenean et nulla purus. Mauris vel tellus non nunc mattis lobortis.Nunc facilisis sagittis ullamcorper. Proin lectus ipsum, gravida et mattis vulputate, tristique ut lectus. Sed et lorem nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aenean eleifend laoreet congue. Vivamus adipiscing nisl ut dolor dignissim semper. Nulla luctus malesuada tincidunt. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Integer enim purus, posuere at ultricies eu, placerat a felis. Suspendisse aliquet urna pretium eros convallis interdum. Quisque in arcu id dui vulputate mollis eget non arcu. Aenean et nulla purus. Mauris vel tellus non nunc mattis lobortis', '', 'Donec Ac Tempus', '', ''),
 	(40, 3, 'Fusce Aliquam', 'Nunc facilisis sagittis ullamcorper. Proin lectus ipsum, gravida et mattis vulputate, tristique ut lectus. Sed et lorem nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aenean eleifend laoreet congue. Vivamus adipiscing nisl ut dolor dignissim semper. Nulla luctus malesuada tincidunt. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Integer enim purus, posuere at ultricies eu, placerat a felis. Suspendisse aliquet urna pretium eros convallis interdum. Quisque in arcu id dui vulputate mollis eget non arcu. Aenean et nulla purus. Mauris vel tellus non nunc mattis lobortis.Nunc facilisis sagittis ullamcorper. Proin lectus ipsum, gravida et mattis vulputate, tristique ut lectus. Sed et lorem nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aenean eleifend laoreet congue. Vivamus adipiscing nisl ut dolor dignissim semper. Nulla luctus malesuada tincidunt. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Integer enim purus, posuere at ultricies eu, placerat a felis. Suspendisse aliquet urna pretium eros convallis interdum. Quisque in arcu id dui vulputate mollis eget non arcu. Aenean et nulla purus. Mauris vel tellus non nunc mattis lobortis', '', 'Fusce Aliquam', '', ''),
 	(49, 3, 'Aocumsan Olit', 'Nunc facilisis sagittis ullamcorper. Proin lectus ipsum, gravida et mattis vulputate, tristique ut lectus. Sed et lorem nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aenean eleifend laoreet congue. Vivamus adipiscing nisl ut dolor dignissim semper. Nulla luctus malesuada tincidunt. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Integer enim purus, posuere at ultricies eu, placerat a felis. Suspendisse aliquet urna pretium eros convallis interdum. Quisque in arcu id dui vulputate mollis eget non arcu. Aenean et nulla purus. Mauris vel tellus non nunc mattis lobortis.Nunc facilisis sagittis ullamcorper. Proin lectus ipsum, gravida et mattis vulputate, tristique ut lectus. Sed et lorem nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aenean eleifend laoreet congue. Vivamus adipiscing nisl ut dolor dignissim semper. Nulla luctus malesuada tincidunt. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Integer enim purus, posuere at ultricies eu, placerat a felis. Suspendisse aliquet urna pretium eros convallis interdum. Quisque in arcu id dui vulputate mollis eget non arcu. Aenean et nulla purus. Mauris vel tellus non nunc mattis lobortis', '', 'Aocumsan Olit', '', ''),
@@ -7752,14 +7748,14 @@ CREATE TABLE IF NOT EXISTS `oc_product_discount` (
   `date_end` date NOT NULL DEFAULT '0000-00-00',
   PRIMARY KEY (`product_discount_id`),
   KEY `product_id` (`product_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=482 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=486 DEFAULT CHARSET=utf8;
 
 -- Дамп данных таблицы kooker.oc_product_discount: 8 rows
 DELETE FROM `oc_product_discount`;
 /*!40000 ALTER TABLE `oc_product_discount` DISABLE KEYS */;
 INSERT INTO `oc_product_discount` (`product_discount_id`, `product_id`, `customer_group_id`, `quantity`, `priority`, `price`, `date_start`, `date_end`) VALUES
-	(479, 42, 1, 30, 1, 66.0000, '0000-00-00', '0000-00-00'),
-	(478, 42, 1, 20, 1, 77.0000, '0000-00-00', '0000-00-00'),
+	(485, 42, 1, 30, 1, 66.0000, '0000-00-00', '0000-00-00'),
+	(484, 42, 1, 20, 1, 77.0000, '2017-11-25', '2017-11-30'),
 	(481, 49, 1, 30, 1, 66.0000, '0000-00-00', '0000-00-00'),
 	(480, 49, 1, 20, 1, 77.0000, '0000-00-00', '0000-00-00'),
 	(469, 63, 1, 30, 1, 66.0000, '0000-00-00', '0000-00-00'),
@@ -8364,7 +8360,7 @@ CREATE TABLE IF NOT EXISTS `oc_product_image` (
   `is_rotator` tinyint(1) DEFAULT '0',
   PRIMARY KEY (`product_image_id`),
   KEY `product_id` (`product_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=3235 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=3245 DEFAULT CHARSET=utf8;
 
 -- Дамп данных таблицы kooker.oc_product_image: 205 rows
 DELETE FROM `oc_product_image`;
@@ -8411,11 +8407,11 @@ INSERT INTO `oc_product_image` (`product_image_id`, `product_id`, `image`, `sort
 	(2452, 31, 'catalog/products1/5.jpg', 0, 0),
 	(2453, 31, 'catalog/products1/11.jpg', 0, 0),
 	(2454, 31, 'catalog/products1/2.jpg', 0, 1),
-	(3164, 42, 'catalog/products1/2.jpg', 0, 0),
-	(3163, 42, 'catalog/products1/5.jpg', 0, 1),
-	(3162, 42, 'catalog/products1/16.jpg', 0, 0),
-	(3161, 42, 'catalog/products1/3.jpg', 0, 0),
-	(3160, 42, 'catalog/products1/10.jpg', 0, 0),
+	(3244, 42, 'catalog/products1/2.jpg', 0, 0),
+	(3243, 42, 'catalog/products1/5.jpg', 0, 1),
+	(3242, 42, 'catalog/products1/16.jpg', 0, 0),
+	(3241, 42, 'catalog/products1/3.jpg', 0, 0),
+	(3240, 42, 'catalog/products1/10.jpg', 0, 0),
 	(3166, 30, 'catalog/products1/8.jpg', 0, 1),
 	(3165, 30, 'catalog/products1/9.jpg', 0, 0),
 	(3170, 47, 'catalog/products1/14.jpg', 0, 1),
@@ -8592,14 +8588,11 @@ CREATE TABLE IF NOT EXISTS `oc_product_option` (
 DELETE FROM `oc_product_option`;
 /*!40000 ALTER TABLE `oc_product_option` DISABLE KEYS */;
 INSERT INTO `oc_product_option` (`product_option_id`, `product_id`, `option_id`, `value`, `required`) VALUES
-	(217, 42, 5, '', 1),
+	(209, 42, 6, '', 1),
 	(225, 47, 12, '2011-04-22', 1),
+	(223, 42, 2, '', 1),
 	(218, 42, 1, '', 1),
-	(208, 42, 4, 'test', 1),
-	(219, 42, 8, '2011-02-20', 1),
-	(222, 42, 7, '', 1),
 	(226, 30, 5, '', 1),
-	(220, 42, 10, '2011-02-20 22:25', 1),
 	(232, 49, 5, '', 1),
 	(234, 49, 2, '', 1),
 	(227, 49, 10, '2011-02-20 22:25', 1),
@@ -8632,10 +8625,13 @@ INSERT INTO `oc_product_option` (`product_option_id`, `product_id`, `option_id`,
 	(259, 79, 12, '2011-04-22', 1),
 	(230, 49, 4, 'test', 1),
 	(231, 49, 1, '', 1),
-	(209, 42, 6, '', 1),
-	(223, 42, 2, '', 1),
-	(221, 42, 9, '22:25', 1),
-	(235, 49, 9, '22:25', 1);
+	(208, 42, 4, 'test', 1),
+	(219, 42, 8, '2011-02-20', 1),
+	(222, 42, 7, '', 1),
+	(235, 49, 9, '22:25', 1),
+	(217, 42, 5, '', 1),
+	(220, 42, 10, '2011-02-20 22:25', 1),
+	(221, 42, 9, '22:25', 1);
 /*!40000 ALTER TABLE `oc_product_option` ENABLE KEYS */;
 
 -- Дамп структуры для таблица kooker.oc_product_option_value
@@ -8661,17 +8657,16 @@ CREATE TABLE IF NOT EXISTS `oc_product_option_value` (
 DELETE FROM `oc_product_option_value`;
 /*!40000 ALTER TABLE `oc_product_option_value` DISABLE KEYS */;
 INSERT INTO `oc_product_option_value` (`product_option_value_id`, `product_option_id`, `product_id`, `option_id`, `option_value_id`, `quantity`, `subtract`, `price`, `price_prefix`, `points`, `points_prefix`, `weight`, `weight_prefix`) VALUES
+	(10, 223, 42, 2, 44, 2696, 1, 30.0000, '+', 0, '+', 30.00000000, '+'),
 	(9, 223, 42, 2, 24, 194, 1, 20.0000, '+', 0, '+', 20.00000000, '+'),
 	(8, 223, 42, 2, 23, 48, 1, 10.0000, '+', 0, '+', 10.00000000, '+'),
-	(2, 217, 42, 5, 42, 200, 1, 2.0000, '+', 0, '+', 2.00000000, '+'),
 	(1, 217, 42, 5, 41, 100, 0, 1.0000, '+', 0, '+', 1.00000000, '+'),
+	(2, 217, 42, 5, 42, 200, 1, 2.0000, '+', 0, '+', 2.00000000, '+'),
 	(3, 217, 42, 5, 40, 300, 0, 3.0000, '+', 0, '+', 3.00000000, '+'),
-	(4, 217, 42, 5, 39, 92, 1, 4.0000, '+', 0, '+', 4.00000000, '+'),
-	(7, 218, 42, 1, 43, 300, 1, 30.0000, '+', 3, '+', 30.00000000, '+'),
 	(16, 226, 30, 5, 40, 5, 1, 0.0000, '+', 0, '+', 0.00000000, '+'),
 	(15, 226, 30, 5, 39, 2, 1, 0.0000, '+', 0, '+', 0.00000000, '+'),
-	(6, 218, 42, 1, 31, 146, 1, 20.0000, '+', 2, '-', 20.00000000, '+'),
-	(5, 218, 42, 1, 32, 96, 1, 10.0000, '+', 1, '+', 10.00000000, '+'),
+	(4, 217, 42, 5, 39, 92, 1, 4.0000, '+', 0, '+', 4.00000000, '+'),
+	(7, 218, 42, 1, 43, 300, 1, 30.0000, '+', 3, '+', 30.00000000, '+'),
 	(55, 258, 78, 5, 40, 5, 1, 0.0000, '+', 0, '+', 0.00000000, '+'),
 	(21, 232, 49, 5, 40, 300, 0, 3.0000, '+', 0, '+', 3.00000000, '+'),
 	(20, 232, 49, 5, 39, 92, 1, 4.0000, '+', 0, '+', 4.00000000, '+'),
@@ -8709,10 +8704,11 @@ INSERT INTO `oc_product_option_value` (`product_option_value_id`, `product_optio
 	(47, 254, 77, 5, 40, 300, 0, 3.0000, '+', 0, '+', 3.00000000, '+'),
 	(46, 254, 77, 5, 39, 92, 1, 4.0000, '+', 0, '+', 4.00000000, '+'),
 	(54, 258, 78, 5, 39, 1, 1, 0.0000, '+', 0, '+', 0.00000000, '+'),
-	(10, 223, 42, 2, 44, 2696, 1, 30.0000, '+', 0, '+', 30.00000000, '+'),
-	(11, 223, 42, 2, 45, 3998, 1, 40.0000, '+', 0, '+', 40.00000000, '+'),
+	(6, 218, 42, 1, 31, 146, 1, 20.0000, '+', 2, '-', 20.00000000, '+'),
 	(22, 232, 49, 5, 41, 100, 0, 1.0000, '+', 0, '+', 1.00000000, '+'),
-	(23, 232, 49, 5, 42, 200, 1, 2.0000, '+', 0, '+', 2.00000000, '+');
+	(23, 232, 49, 5, 42, 200, 1, 2.0000, '+', 0, '+', 2.00000000, '+'),
+	(5, 218, 42, 1, 32, 96, 1, 10.0000, '+', 1, '+', 10.00000000, '+'),
+	(11, 223, 42, 2, 45, 3998, 1, 40.0000, '+', 0, '+', 40.00000000, '+');
 /*!40000 ALTER TABLE `oc_product_option_value` ENABLE KEYS */;
 
 -- Дамп структуры для таблица kooker.oc_product_recurring
@@ -9244,13 +9240,13 @@ CREATE TABLE IF NOT EXISTS `oc_product_reward` (
   `customer_group_id` int(11) NOT NULL DEFAULT '0',
   `points` int(8) NOT NULL DEFAULT '0',
   PRIMARY KEY (`product_reward_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=672 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=674 DEFAULT CHARSET=utf8;
 
 -- Дамп данных таблицы kooker.oc_product_reward: 28 rows
 DELETE FROM `oc_product_reward`;
 /*!40000 ALTER TABLE `oc_product_reward` DISABLE KEYS */;
 INSERT INTO `oc_product_reward` (`product_reward_id`, `product_id`, `customer_group_id`, `points`) VALUES
-	(659, 42, 1, 100),
+	(673, 42, 1, 100),
 	(661, 47, 1, 300),
 	(662, 28, 1, 400),
 	(665, 43, 1, 600),
@@ -9292,13 +9288,13 @@ CREATE TABLE IF NOT EXISTS `oc_product_special` (
   `date_end` date NOT NULL DEFAULT '0000-00-00',
   PRIMARY KEY (`product_special_id`),
   KEY `product_id` (`product_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=583 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=585 DEFAULT CHARSET=utf8;
 
 -- Дамп данных таблицы kooker.oc_product_special: 32 rows
 DELETE FROM `oc_product_special`;
 /*!40000 ALTER TABLE `oc_product_special` DISABLE KEYS */;
 INSERT INTO `oc_product_special` (`product_special_id`, `product_id`, `customer_group_id`, `priority`, `price`, `date_start`, `date_end`) VALUES
-	(569, 42, 1, 1, 230.0000, '2016-12-12', '2017-12-12'),
+	(584, 42, 1, 1, 230.0000, '2017-11-25', '2017-12-15'),
 	(571, 47, 1, 1, 90.0000, '2016-12-12', '2017-12-12'),
 	(570, 30, 1, 1, 180.0000, '2016-12-12', '2017-12-12'),
 	(452, 40, 1, 1, 120.0000, '2016-12-12', '2017-12-12'),
@@ -12346,7 +12342,7 @@ CREATE TABLE IF NOT EXISTS `oc_url_alias` (
   PRIMARY KEY (`url_alias_id`),
   KEY `query` (`query`),
   KEY `keyword` (`keyword`)
-) ENGINE=MyISAM AUTO_INCREMENT=1055 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=1057 DEFAULT CHARSET=utf8;
 
 -- Дамп данных таблицы kooker.oc_url_alias: 228 rows
 DELETE FROM `oc_url_alias`;
@@ -12358,7 +12354,7 @@ INSERT INTO `oc_url_alias` (`url_alias_id`, `query`, `keyword`) VALUES
 	(835, 'category_id=27', 'mac'),
 	(954, 'manufacturer_id=8', 'apple'),
 	(772, 'information_id=4', 'about_us'),
-	(1044, 'product_id=42', 'test'),
+	(1056, 'product_id=42', 'test'),
 	(789, 'category_id=34', 'mp3-players'),
 	(781, 'category_id=36', 'test2'),
 	(774, 'category_id=18', 'laptop-notebook'),
