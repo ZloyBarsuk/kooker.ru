@@ -6808,185 +6808,204 @@ class ModelToolExportImport extends Model
         $len = count($products);
         $min_id = ($len > 0) ? $products[0]['product_id'] : 0;
         $max_id = ($len > 0) ? $products[$len - 1]['product_id'] : 0;
+        // выгрузка товаров из базы. которые есть в приске каталога Бергофф. Остатки и актуальность берем из Бергофа.
         foreach ($products as $row) {
+
 
             $flag = false;
             if (array_key_exists($row['product_id'], trim($produxts_from_xml))) {
                 $flag = true;
+
             }
 
             // если товар есть уже в базе- т тока обновляем его количество у Бергофа и актуальность в нашем магазине нах
 
 
+            $data = array();
+            $worksheet->getRowDimension($i)->setRowHeight(26);
+            $product_id = $row['product_id'];
+            $data[$j++] = $product_id;
+            foreach ($languages as $language) {
+                $data[$j++] = html_entity_decode($row['name'][$language['code']], ENT_QUOTES, 'UTF-8');
+            }
+            $data[$j++] = $row['categories'];
+            $data[$j++] = $row['sku'];
+            $data[$j++] = $row['upc'];
+            if (in_array('ean', $product_fields)) {
+                $data[$j++] = $row['ean'];
+            }
+            if (in_array('jan', $product_fields)) {
+                $data[$j++] = $row['jan'];
+            }
+            if (in_array('isbn', $product_fields)) {
+                $data[$j++] = $row['isbn'];
+            }
+            if (in_array('mpn', $product_fields)) {
+                $data[$j++] = $row['mpn'];
+            }
+            $data[$j++] = $row['location'];
+            $data[$j++] = $flag ? $produxts_from_xml[$row['product_id']]['inStock'] : $row['quantity'];
+            $data[$j++] = $row['model'];
+            $data[$j++] = $row['manufacturer'];
+            $data[$j++] = $row['image_name']; // добавить
+            $data[$j++] = ($row['shipping'] == 0) ? 'no' : 'yes';
+            $data[$j++] = $row['price'];
+            $data[$j++] = $row['points'];
+            $data[$j++] = $row['date_added'];
+            $data[$j++] = $row['date_modified'];
+            $data[$j++] = $row['date_available'];
+            $data[$j++] = $row['weight'];
+            $data[$j++] = $row['weight_unit'];
+            $data[$j++] = $row['length'];
+            $data[$j++] = $row['width'];
+            $data[$j++] = $row['height'];
+            $data[$j++] = $row['length_unit'];
+            $data[$j++] = ($row['status'] == 0) ? 'false' : 'true';
+            $data[$j++] = $row['tax_class_id'];
+            $data[$j++] = ($row['keyword']) ? $row['keyword'] : '';
+            foreach ($languages as $language) {
+                $data[$j++] = html_entity_decode($row['description'][$language['code']], ENT_QUOTES, 'UTF-8');
+            }
+            if ($exist_meta_title) {
+                foreach ($languages as $language) {
+                    $data[$j++] = html_entity_decode($row['meta_title'][$language['code']], ENT_QUOTES, 'UTF-8');
+                }
+            }
+            foreach ($languages as $language) {
+                $data[$j++] = html_entity_decode($row['meta_description'][$language['code']], ENT_QUOTES, 'UTF-8');
+            }
+            foreach ($languages as $language) {
+                $data[$j++] = html_entity_decode($row['meta_keyword'][$language['code']], ENT_QUOTES, 'UTF-8');
+            }
+            $data[$j++] = $flag ? $produxts_from_xml[$row['product_id']]['available'] : $row['stock_status_id'];
+            $store_id_list = '';
+            if (isset($store_ids[$product_id])) {
+                foreach ($store_ids[$product_id] as $store_id) {
+                    $store_id_list .= ($store_id_list == '') ? $store_id : ',' . $store_id;
+                }
+            }
+            $data[$j++] = $store_id_list;
+            $layout_list = '';
+            if (isset($layouts[$product_id])) {
+                foreach ($layouts[$product_id] as $store_id => $name) {
+                    $layout_list .= ($layout_list == '') ? $store_id . ':' . $name : ',' . $store_id . ':' . $name;
+                }
+            }
+            $data[$j++] = $layout_list;
+            $data[$j++] = $row['related'];
+            foreach ($languages as $language) {
+                $data[$j++] = html_entity_decode($row['tag'][$language['code']], ENT_QUOTES, 'UTF-8');
+            }
+            $data[$j++] = $row['sort_order'];
+            $data[$j++] = ($row['subtract'] == 0) ? 'false' : 'true';
+            $data[$j++] = $row['minimum'];
+            $this->setCellRow($worksheet, $i, $data, $this->null_array, $styles);
+            $i += 1;
+            $j = 0;
+
             if ($flag) {
-
-                $data = array();
-                $worksheet->getRowDimension($i)->setRowHeight(26);
-                $product_id = $row['product_id'];
-                $data[$j++] = $product_id;
-                foreach ($languages as $language) {
-                    $data[$j++] = html_entity_decode($row['name'][$language['code']], ENT_QUOTES, 'UTF-8');
-                }
-                $data[$j++] = $row['categories'];
-                $data[$j++] = $row['sku'];
-                $data[$j++] = $row['upc'];
-                if (in_array('ean', $product_fields)) {
-                    $data[$j++] = $row['ean'];
-                }
-                if (in_array('jan', $product_fields)) {
-                    $data[$j++] = $row['jan'];
-                }
-                if (in_array('isbn', $product_fields)) {
-                    $data[$j++] = $row['isbn'];
-                }
-                if (in_array('mpn', $product_fields)) {
-                    $data[$j++] = $row['mpn'];
-                }
-                $data[$j++] = $row['location'];
-                $data[$j++] = $produxts_from_xml[$row['product_id']]['inStock'];  // $row['quantity'];
-                $data[$j++] = $row['model'];
-                $data[$j++] = $row['manufacturer'];
-                $data[$j++] = $row['image_name']; // добавить
-                $data[$j++] = ($row['shipping'] == 0) ? 'no' : 'yes';
-                $data[$j++] = $row['price'];
-                $data[$j++] = $row['points'];
-                $data[$j++] = $row['date_added'];
-                $data[$j++] = $row['date_modified'];
-                $data[$j++] = $row['date_available'];
-                $data[$j++] = $row['weight'];
-                $data[$j++] = $row['weight_unit'];
-                $data[$j++] = $row['length'];
-                $data[$j++] = $row['width'];
-                $data[$j++] = $row['height'];
-                $data[$j++] = $row['length_unit'];
-                $data[$j++] = ($row['status'] == 0) ? 'false' : 'true';
-                $data[$j++] = $row['tax_class_id'];
-                $data[$j++] = ($row['keyword']) ? $row['keyword'] : '';
-                foreach ($languages as $language) {
-                    $data[$j++] = html_entity_decode($row['description'][$language['code']], ENT_QUOTES, 'UTF-8');
-                }
-                if ($exist_meta_title) {
-                    foreach ($languages as $language) {
-                        $data[$j++] = html_entity_decode($row['meta_title'][$language['code']], ENT_QUOTES, 'UTF-8');
-                    }
-                }
-                foreach ($languages as $language) {
-                    $data[$j++] = html_entity_decode($row['meta_description'][$language['code']], ENT_QUOTES, 'UTF-8');
-                }
-                foreach ($languages as $language) {
-                    $data[$j++] = html_entity_decode($row['meta_keyword'][$language['code']], ENT_QUOTES, 'UTF-8');
-                }
-                $data[$j++] = $produxts_from_xml[$row['product_id']]['available']; // $row['stock_status_id'];
-                $store_id_list = '';
-                if (isset($store_ids[$product_id])) {
-                    foreach ($store_ids[$product_id] as $store_id) {
-                        $store_id_list .= ($store_id_list == '') ? $store_id : ',' . $store_id;
-                    }
-                }
-                $data[$j++] = $store_id_list;
-                $layout_list = '';
-                if (isset($layouts[$product_id])) {
-                    foreach ($layouts[$product_id] as $store_id => $name) {
-                        $layout_list .= ($layout_list == '') ? $store_id . ':' . $name : ',' . $store_id . ':' . $name;
-                    }
-                }
-                $data[$j++] = $layout_list;
-                $data[$j++] = $row['related'];
-                foreach ($languages as $language) {
-                    $data[$j++] = html_entity_decode($row['tag'][$language['code']], ENT_QUOTES, 'UTF-8');
-                }
-                $data[$j++] = $row['sort_order'];
-                $data[$j++] = ($row['subtract'] == 0) ? 'false' : 'true';
-                $data[$j++] = $row['minimum'];
-                $this->setCellRow($worksheet, $i, $data, $this->null_array, $styles);
-                $i += 1;
-                $j = 0;
+                unset($produxts_from_xml[$row['product_id']]);
             }
-            // если в базе нет такого товара - то берем его из  парсера XML и все данные записываем из него  ))))))
+        }
 
-            else {
-                $data = array();
-                $worksheet->getRowDimension($i)->setRowHeight(26);
-                $product_id =$produxts_from_xml[$row['product_id']]['available']; // $row['product_id'];
-                $data[$j++] = $product_id;
-                foreach ($languages as $language) {
-                    $data[$j++] = html_entity_decode($row['name'][$language['code']], ENT_QUOTES, 'UTF-8');
-                }
-                $data[$j++] = $row['categories'];
-                $data[$j++] = $row['sku'];
-                $data[$j++] = $row['upc'];
-                if (in_array('ean', $product_fields)) {
-                    $data[$j++] = $row['ean'];
-                }
-                if (in_array('jan', $product_fields)) {
-                    $data[$j++] = $row['jan'];
-                }
-                if (in_array('isbn', $product_fields)) {
-                    $data[$j++] = $row['isbn'];
-                }
-                if (in_array('mpn', $product_fields)) {
-                    $data[$j++] = $row['mpn'];
-                }
-                $data[$j++] = $row['location'];
-                $data[$j++] = $produxts_from_xml[$row['product_id']]['inStock'];  // $row['quantity'];
-                $data[$j++] = $row['model'];
-                $data[$j++] = $row['manufacturer'];
-                $data[$j++] = $row['image_name']; // добавить
-                $data[$j++] = ($row['shipping'] == 0) ? 'no' : 'yes';
-                $data[$j++] =  $row['price'];
-                $data[$j++] = $row['points'];
-                $data[$j++] = $row['date_added'];
-                $data[$j++] = $row['date_modified'];
-                $data[$j++] = $row['date_available'];
-                $data[$j++] = $row['weight'];
-                $data[$j++] = $row['weight_unit'];
-                $data[$j++] = $row['length'];
-                $data[$j++] = $row['width'];
-                $data[$j++] = $row['height'];
-                $data[$j++] = $row['length_unit'];
-                $data[$j++] = ($row['status'] == 0) ? 'false' : 'true';
-                $data[$j++] = $row['tax_class_id'];
-                $data[$j++] = ($row['keyword']) ? $row['keyword'] : '';
-                foreach ($languages as $language) {
-                    $data[$j++] = html_entity_decode($row['description'][$language['code']], ENT_QUOTES, 'UTF-8');
-                }
-                if ($exist_meta_title) {
-                    foreach ($languages as $language) {
-                        $data[$j++] = html_entity_decode($row['meta_title'][$language['code']], ENT_QUOTES, 'UTF-8');
-                    }
-                }
-                foreach ($languages as $language) {
-                    $data[$j++] = html_entity_decode($row['meta_description'][$language['code']], ENT_QUOTES, 'UTF-8');
-                }
-                foreach ($languages as $language) {
-                    $data[$j++] = html_entity_decode($row['meta_keyword'][$language['code']], ENT_QUOTES, 'UTF-8');
-                }
-                $data[$j++] = $produxts_from_xml[$row['product_id']]['available']; // $row['stock_status_id'];
-                $store_id_list = '';
-                if (isset($store_ids[$product_id])) {
-                    foreach ($store_ids[$product_id] as $store_id) {
-                        $store_id_list .= ($store_id_list == '') ? $store_id : ',' . $store_id;
-                    }
-                }
-                $data[$j++] = $store_id_list;
-                $layout_list = '';
-                if (isset($layouts[$product_id])) {
-                    foreach ($layouts[$product_id] as $store_id => $name) {
-                        $layout_list .= ($layout_list == '') ? $store_id . ':' . $name : ',' . $store_id . ':' . $name;
-                    }
-                }
-                $data[$j++] = $layout_list;
-                $data[$j++] = $row['related'];
-                foreach ($languages as $language) {
-                    $data[$j++] = html_entity_decode($row['tag'][$language['code']], ENT_QUOTES, 'UTF-8');
-                }
-                $data[$j++] = $row['sort_order'];
-                $data[$j++] = ($row['subtract'] == 0) ? 'false' : 'true';
-                $data[$j++] = $row['minimum'];
-                $this->setCellRow($worksheet, $i, $data, $this->null_array, $styles);
-                $i += 1;
-                $j = 0;
+        // выгрузка товаров, которых нет в базе из каталога Бергофа. Вся инфа по товарам из каталога нахуй блядь
+        foreach ($produxts_from_xml as $row) {
+
+
+            $data = array();
+            $worksheet->getRowDimension($i)->setRowHeight(26);
+            $product_id = $row['id'];
+            $data[$j++] = $product_id;
+            foreach ($languages as $language) {
+              //  $data[$j++] = html_entity_decode($row['name'][$language['code']], ENT_QUOTES, 'UTF-8');
+                $data[$j++] = $row['name'];
+
             }
+            $data[$j++] = $row['categoriesList'];
+            $data[$j++] = $row['id'];
+            $data[$j++] = ''; // $row['upc'];
+            if (in_array('ean', $product_fields)) {
+                $data[$j++] = $row['barcode'];
+            }
+            if (in_array('jan', $product_fields)) {
+                $data[$j++] = ''; // $row['jan'];
+            }
+            if (in_array('isbn', $product_fields)) {
+                $data[$j++] = ''; // $row['isbn'];
+            }
+            if (in_array('mpn', $product_fields)) {
+                $data[$j++] = ''; //  $row['mpn'];
+            }
+            $data[$j++] = ''; // $row['location'];
+            $data[$j++] = $row['inStock'];  // $row['quantity'];
+            $data[$j++] = $row['id'];
+            $data[$j++] = $row['vendor'];
+            $data[$j++] = str_replace('http://b2b.berghoffworldwide.ru/catalog_xml_export/productsPhoto/',"catalog/products1/",$row['pictureTHUMB']);
+            $data[$j++] = 'yes'; // ($row['shipping'] == 0) ? 'no' : 'yes';
+            $data[$j++] = $row['price'];
+            $data[$j++] = '0'; // $row['points'];
+            $data[$j++] = ''; //  $row['date_added'];
+            $data[$j++] = ''; //  $row['date_modified'];
+            $data[$j++] = ''; //  $row['date_available'];
+            $data[$j++] =  $row['param']['Вес']['value']; //  ''; //
+            $data[$j++] =  $row['param']['Вес']['unit']; // ''; //
+            $data[$j++] = ''; //  $row['length'];
+            $data[$j++] = ''; //  $row['width'];
+            $data[$j++] = ''; //  $row['height'];
+            $data[$j++] = ''; //  $row['length_unit'];
+            $data[$j++] = ($row['inStock'] == '0') ? 'false' : 'true';
+            $data[$j++] = '0'; // $row['tax_class_id'];
+            $data[$j++] = ''; // ($row['keyword']) ? $row['keyword'] : '';
+            foreach ($languages as $language) {
+               // $data[$j++] = html_entity_decode($row['description'][$language['code']], ENT_QUOTES, 'UTF-8');
+                $data[$j++] = $row['description']; // mb_convert_encoding(str_replace(['<br>','</br>','<br\>','<![CDATA[','l]]',']]','l',''],'',$row['description']), 'UTF-8', 'UTF-8');
+                   // @iconv('UTF-8', 'windows-1251', str_replace(['<br>','</br>','<br\>',''],'',$row['description']));;
+
+            }
+            if ($exist_meta_title) {
+                foreach ($languages as $language) {
+                    // $data[$j++] = html_entity_decode($row['meta_title'][$language['code']], ENT_QUOTES, 'UTF-8');
+                    $data[$j++] = $row['name']; //  mb_convert_encoding(str_replace(['<br>','</br>','<br\>','<![CDATA[','l]]',']]','l','',''],'',$row['name']), 'UTF-8', 'UTF-8');
+
+                }
+            }
+            foreach ($languages as $language) {
+                //  $data[$j++] = html_entity_decode($row['meta_description'][$language['code']], ENT_QUOTES, 'UTF-8');
+                $data[$j++] = '';
+
+            }
+            foreach ($languages as $language) {
+                // $data[$j++] = html_entity_decode($row['meta_keyword'][$language['code']], ENT_QUOTES, 'UTF-8');
+                $data[$j++] = '';
+            }
+            $data[$j++] = $row['available']; // $row['stock_status_id'];
+            $store_id_list = '';
+            if (isset($store_ids[$product_id])) {
+                foreach ($store_ids[$product_id] as $store_id) {
+                    $store_id_list .= ($store_id_list == '') ? $store_id : ',' . $store_id;
+                }
+            }
+            $data[$j++] = $store_id_list;
+            $layout_list = '';
+            if (isset($layouts[$product_id])) {
+                foreach ($layouts[$product_id] as $store_id => $name) {
+                    $layout_list .= ($layout_list == '') ? $store_id . ':' . $name : ',' . $store_id . ':' . $name;
+                }
+            }
+            $data[$j++] = $layout_list;
+            $data[$j++] = ''; //  $row['related'];
+            foreach ($languages as $language) {
+                //   $data[$j++] = html_entity_decode($row['tag'][$language['code']], ENT_QUOTES, 'UTF-8');
+                $data[$j++] = '';
+
+
+            }
+            $data[$j++] = '0'; // $row['sort_order'];
+            $data[$j++] = 'true'; // ($row['subtract'] == 0) ? 'false' : 'true';
+            $data[$j++] = '1'; // $row['minimum'];
+            $this->setCellRow($worksheet, $i, $data, $this->null_array, $styles);
+            $i += 1;
+            $j = 0;
 
 
         }

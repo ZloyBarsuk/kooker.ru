@@ -1,39 +1,52 @@
-<?php
-//	echo '<pre>';
-	$xml = FALSE;
+﻿<?php
 
-	$init_load_url = TRUE;// при загрузке ПО ССЫЛКЕ выставить TRUE, при загрузке ДОКУМЕНТА выставить FALSE
 
-	$doc = new domDocument();
-	
-	$xml = file_get_contents('http://b2b.berghoffworldwide.ru/catalog_xml_export'); // загрузка файла по ссылке
-		
+/*
+
+http://b2b.berghoffworldwide.ru/catalog_xml_export/productsPhoto/1100890/thumb.jpg
+http://b2b.berghoffworldwide.ru/catalog_xml_export/productsPhoto/1100890/01.jpg
+
+*/
+
+
+// Function to parce XML
+
+function XML_Parser()
+{
+    $xml = FALSE;
+
+    $init_load_url = TRUE;// при загрузке ПО ССЫЛКЕ выставить TRUE, при загрузке ДОКУМЕНТА выставить FALSE
+
+    $doc = new domDocument();
+
+    $xml = file_get_contents('http://b2b.berghoffworldwide.ru/catalog_xml_export'); // загрузка файла по ссылке
+
     if( $xml = $doc->loadXML($xml) ) // используется, при загрузке файла по ссылке
     {
         $yaml = $doc->getElementsByTagName('yml_catalog');
-		
-		$yaml = $yaml->item(0);
+
+        $yaml = $yaml->item(0);
 
         $shop = $yaml->getElementsByTagName('shop');
-		
-		$shop = $shop->item(0);
+
+        $shop = $shop->item(0);
 
         $categories = $shop->getElementsByTagName('categories');
-		
-		$categories = $categories->item(0);
+
+        $categories = $categories->item(0);
 
         $icons = $shop->getElementsByTagName('specIcons');
-		
-		$icons = $icons->item(0);
+
+        $icons = $icons->item(0);
 
         $offers = $shop->getElementsByTagName('offers');
-		
-		$offers = $offers->item(0);
-            
+
+        $offers = $offers->item(0);
+
         $result = array();
 
         /*Категории*/
-           
+
         // Парсинг данных
         foreach ( $categories->getElementsByTagName('category') as $category )
         {
@@ -43,20 +56,20 @@
 
             $parse_cat[$cid] = array(
                 'category_id' => $cid,
-                'parent_id'   => (string) ($category->getAttribute('parentId') ? $category->getAttribute('parentId') : 0),                 
+                'parent_id'   => (string) ($category->getAttribute('parentId') ? $category->getAttribute('parentId') : 0),
                 'text'        => $title
-            );       
-			
+            );
+
         }
         //print_r($parse_cat); die();
-		$result['categories'] = $parse_cat;
-		
-		//Формирование массива данных
-                
+        $result['categories'] = $parse_cat;
+
+        //Формирование массива данных
+
         /*/ Вывод категорий с подкатегориями
-        
+
         foreach ($parse_cat as $item ) {
-            
+
             if ($item['parent_id'] == 0)
             {
                 foreach ($parse_cat as $childs)
@@ -66,24 +79,24 @@
                         $item['childs'][] = $childs;
                     }
                 }
-                
+
                 $new_cats[] = $item;
             }
-            
+
         }
-               
-                   
-        
+
+
+
         $result['categories'] = $new_cats;*/
-            
+
         /*Иконки*/
-        
+
         // Парсинг данных
-        
+
         //Формирование массива данных
         foreach ($icons->getElementsByTagName('icon') as $icon)
         {
-			$id = $icon->getAttribute('id');
+            $id = $icon->getAttribute('id');
             $childs = array('id' => $id);
 
             $names = array('symbol','name','sortOrder','png','svg');
@@ -98,18 +111,18 @@
 
             $parse_icons[$id] = $childs;
         }
-            
+
         $result['icons'] = $parse_icons;
-                       
-            
+
+
         /*Продукты*/
-            
+
         // Парсинг данных
-        
+
         //Формирование массива данных
         foreach ( $offers->getElementsByTagName('offer') as $offer )
-        {	
-			$pid = $offer->getAttribute('id');
+        {
+            $pid = $offer->getAttribute('id');
             $childs = array(
 
                 'id'        => $pid,
@@ -165,8 +178,8 @@
                 }
                 else if( $child->nodeName == 'param' )
                 {
-					$param_name = $child->getAttribute('name');
-					
+                    $param_name = $child->getAttribute('name');
+
                     $childs['param'][$param_name] = array(
 
                         'name'  => $param_name,
@@ -185,20 +198,87 @@
                 }
             }
 
-            $parse_offers[$pid] = $childs;             
+            $parse_offers[$pid] = $childs;
         }
-        
-		$result['offers'] = $parse_offers;
-                       
+
+        $result['offers'] = $parse_offers;
+
         return $result; //Вывод массива с данными парсера
-		
-		/*echo '<pre>';
-			//var_dump($result); 
-			print_r($result);
-		echo '</pre>';*/
+
+        /*echo '<pre>';
+            //var_dump($result);
+            print_r($result);
+        echo '</pre>';*/
+
+    }
+    else
+    {
+        echo 'not load';
+    }
+}
+
+
+
+
+
+
+
+$data_products=XML_Parser();
+
+$data_products=$data_products['offers'];
+
+
+
+$total_pictures=0;
+foreach ($data_products as $product)
+{
+    $path = "catalogsss/products1/";
+    $photo_url_thumb = $product['pictureTHUMB'];
+
+    $folder=trim($product['id']);
+
+    $path=$path.$folder;
+    if (!file_exists($path)) {
+
+        mkdir($path, 0755);
+
+    }
+    file_put_contents($path.'/'.str_replace("http://b2b.berghoffworldwide.ru/catalog_xml_export/productsPhoto/".$product['id']."/",'',$photo_url_thumb), file_get_contents($photo_url_thumb));
+
+    if(is_array($product['picture']))
+    {
+        foreach ($product['picture'] as $picture)
+        {
+            $photo_url_thumb = $picture;
+
+
+            file_put_contents($path.'/'.str_replace("http://b2b.berghoffworldwide.ru/catalog_xml_export/productsPhoto/".$product['id']."/",'',$photo_url_thumb), file_get_contents($photo_url_thumb));
 
         }
-        else
-        {
-            echo 'not load';
-        }    
+
+
+    }
+    $path='';
+    $total_pictures++;
+
+}
+
+
+echo 'Всего загружено основных картинок=> '.$total_pictures." штук";
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+?>
+
